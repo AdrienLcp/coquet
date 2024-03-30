@@ -1,0 +1,42 @@
+@import '@/Styles/reset.css'
+@import '@/Styles/vars.sass'
+@import '@/Styles/sizes.sass'
+@import '@/Styles/borders.sass'
+@import '@/Styles/colors.sass'
+@import '@/Styles/shadows.sass'
+@import '@/Styles/transitions.sass'
+@import '@/Styles/animations.sass'
+@import '@/Styles/mixins.sass'
+@import '@/Styles/typography.sass'
+
+*::-webkit-scrollbar
+  width: 0.5rem
+
+  &-track
+    background-color: hsla(var(--secondary) / 0.1)
+    border-radius: var(--radius)
+
+  &-thumb
+    background-color: hsla(var(--secondary) / 0.2)
+    border-radius: var(--radius)
+
+    &:hover
+      background-color: hsla(var(--secondary) / 0.5)
+
+html
+  scroll-behavior: smooth
+  color-scheme: light dark
+
+body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  width: 100vw
+  min-height: 100svh
+  display: flex
+  flex-direction: column
+  background-color: hsl(var(--neutral-background-primary-rest, 0 0% 100%))
+  color: hsl(var(--neutral-foreground-black-rest, 0 0% 14%))
+  font-family: var(--font-base)
+
+h1, h2, h3, h4, h5, h6
+  font-family: var(--font-title)

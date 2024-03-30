@@ -1,0 +1,28 @@
+@keyframes slide-in-up
+  from
+    opacity: 0
+    transform: translateY(100%)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fade-out
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+@mixin slide-in-up
+  animation: slide-in-up var(--transition-200) var(--timing, ease-in-out)
+
+@mixin fade-in
+  animation: fade-in var(--transition-200) var(--timing, ease-in-out)
+
+@mixin fade-out
+  animation: fade-out var(--transition-200) var(--timing, ease-in-out)
