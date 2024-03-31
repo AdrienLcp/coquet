@@ -30,17 +30,13 @@ export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) =
     setCurrentTheme(theme)
     storeItem('theme', theme)
 
-    switch (theme) {
-      case 'Dark':
-      case 'Light':
-        setIsDarkModeActive(theme === 'Light')
-        break
-      case 'System':
-      default:
-        const matcher = window.matchMedia(PREFERS_DARK_COLOR_SCHEME)
-        setIsDarkModeActive(matcher.matches)
-        break
+    if (theme === 'System') {
+      const matcher = window.matchMedia(PREFERS_DARK_COLOR_SCHEME)
+      setIsDarkModeActive(matcher.matches)
+      return
     }
+
+    setIsDarkModeActive(theme === 'Dark')
   }
 
   React.useEffect(() => {
