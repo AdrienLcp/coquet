@@ -5,7 +5,8 @@ import React from 'react'
 import { useProvidedContext } from '@/Helpers/contexts'
 import { getStoredItem, storeItem } from '@/Helpers/local-storage'
 
-export type Theme = 'Light' | 'Dark' | 'System'
+export const THEMES = ['System', 'Light', 'Dark'] as const
+export type Theme = typeof THEMES[number]
 
 const PREFERS_DARK_COLOR_SCHEME = '(prefers-color-scheme: dark)'
 
@@ -18,19 +19,21 @@ type ThemeContextValue = {
 const ThemeContext = React.createContext<ThemeContextValue | null>(null)
 
 export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = React.useState<Theme>('System')
   const [isDarkModeActive, setIsDarkModeActive] = React.useState<boolean>(true)
+  const [currentTheme, setCurrentTheme] = React.useState<Theme>('System')
 
   const changeTheme = (theme: Theme) => {
+    if (!THEMES.includes(theme)) {
+      return
+    }
+
     setCurrentTheme(theme)
     storeItem('theme', theme)
 
     switch (theme) {
       case 'Dark':
-        setIsDarkModeActive(true)
-        break
       case 'Light':
-        setIsDarkModeActive(false)
+        setIsDarkModeActive(theme === 'Light')
         break
       case 'System':
       default:

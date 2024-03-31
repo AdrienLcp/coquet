@@ -1,0 +1,60 @@
+@import '@/Styles/mixins'
+@import '@/Styles/typography'
+
+.dropdown
+  &__trigger
+    @include flex-center
+    padding: var(--spacing-m)
+    border: var(--stroke-thick, 2px) solid hsl(var(--neutral-stroke-rest))
+    border-radius: var(--radius-xxs, 4px)
+    width: clamp(30px, calc(25px + 1vw), 40px)
+    height: clamp(30px, calc(25px + 1vw), 40px)
+
+    &:hover
+      border-color: hsl(var(--neutral-stroke-hover))
+      background-color: hsl(var(--neutral-background-primary-hover))
+
+    &:active
+      border-color: hsl(var(--neutral-stroke-pressed))
+      background-color: hsl(var(--neutral-background-primary-pressed))
+
+    &:disabled
+      border-color: hsl(var(--neutral-stroke-disabled))
+      color: hsl(var(--neutral-foreground-disabled))
+
+  &__menu
+    background-color: hsl(var(--neutral-background-secondary-rest))
+    padding-block: var(--spacing-s)
+    border-radius: var(--radius-xxs, 4px)
+    box-shadow: var(--elevation-4)
+    outline: none
+
+    &__option
+      @include label-large
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: var(--spacing-xxl)
+      padding: var(--spacing-m) var(--spacing-xl)
+      min-width: 150px
+      cursor: pointer
+      outline: none
+
+      &__box
+        display: flex
+        align-items: center
+        gap: var(--spacing-m)
+
+      &:hover
+        background-color: hsl(var(--neutral-background-secondary-hover))
+
+      &:active
+        background-color: hsl(var(--neutral-background-secondary-pressed))
+
+      &.selected
+        background-color: hsl(var(--neutral-background-secondary-selected))
+        color: hsl(var(--brand-foreground-primary-rest))
+
+      &.disabled
+        pointer-events: none
+        color: hsl(var(--neutral-foreground-disabled))

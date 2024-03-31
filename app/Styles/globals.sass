@@ -10,22 +10,26 @@
 @import '@/Styles/typography.sass'
 
 *::-webkit-scrollbar
-  width: 0.5rem
+  max-width: 0.5rem
+  max-height: 0.5rem
 
   &-track
-    background-color: hsla(var(--secondary) / 0.1)
-    border-radius: var(--radius)
+    background-color: hsl(var(--neutral-background-secondary-rest))
+    border-radius: var(--radius-circular, 99px)
 
   &-thumb
-    background-color: hsla(var(--secondary) / 0.2)
-    border-radius: var(--radius)
+    background-color: hsl(var(--brand-background-secondary-rest))
+    border-radius: var(--radius-circular, 99px)
 
     &:hover
-      background-color: hsla(var(--secondary) / 0.5)
+      background-color: hsl(var(--brand-background-secondary-hover))
+
+    &:active
+      background-color: hsl(var(--brand-background-secondary-pressed))
 
 html
   scroll-behavior: smooth
-  color-scheme: light dark
+  color-scheme: dark light
 
 body
   -webkit-font-smoothing: antialiased
@@ -34,9 +38,10 @@ body
   min-height: 100svh
   display: flex
   flex-direction: column
-  background-color: hsl(var(--neutral-background-primary-rest, 0 0% 100%))
-  color: hsl(var(--neutral-foreground-black-rest, 0 0% 14%))
+  background-color: hsl(var(--neutral-background-primary-rest))
+  color: hsl(var(--neutral-foreground-rest))
   font-family: var(--font-base)
+  overflow-x: hidden
 
 h1, h2, h3, h4, h5, h6
   font-family: var(--font-title)

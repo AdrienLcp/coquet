@@ -16,14 +16,15 @@ import esStrings from '@/I18n/Dictionaries/es.json'
 type Dictionary = typeof frStrings
 type I18NStringPaths = DotNestedKeys<Dictionary>
 
-export type Locale = 'FR' | 'EN' | 'ES'
+export const LOCALES = ['EN', 'FR', 'ES'] as const
+
+export type Locale = typeof LOCALES[number]
 
 const DEFAULT_LOCALE: Locale = 'FR' as const
 
 type LocaleInfo = {
   label: string
   dictionary: Dictionary
-  IconFlag?: React.ReactNode
 }
 
 type LocalesMap = Record<Locale, LocaleInfo>
@@ -62,10 +63,12 @@ export const I18nProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   })
 
   const changeLocale = (newLocale: Locale) => {
-    if (Object.keys(locales).includes(newLocale)) {
-      setCurrentLocale(newLocale)
-      storeItem('locale', newLocale)
+    if (!LOCALES.includes(newLocale)) {
+      return
     }
+
+    setCurrentLocale(newLocale)
+    storeItem('locale', newLocale)
   }
 
   React.useEffect(() => {

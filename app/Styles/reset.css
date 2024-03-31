@@ -187,6 +187,7 @@ button {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  color: inherit;
 }
 
 button:focus-visible {
