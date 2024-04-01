@@ -1,0 +1,20 @@
+@import '@/Styles/typography'
+
+.logo
+  border-radius: var(--radius-circular, 99px)
+
+.logo-title
+  display: flex
+  align-items: center
+
+  &.small
+    @include title-small
+    gap: var(--spacing-s)
+
+  &.medium
+    @include headline-medium
+    gap: var(--spacing-xxl)
+
+  &.large
+    @include display-large
+    gap: var(--spacing-xxxxxl)

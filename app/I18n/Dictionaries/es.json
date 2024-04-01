@@ -1,4 +1,10 @@
 {
+  "app": {
+    "name": "El Moment Coquet",
+    "shortName": "EMC",
+    "description": "Grandes masajes",
+    "logoAlt": "El Moment Coquet logo"
+  },
   "features": {
     "theme": {
       "light": "Claro",
