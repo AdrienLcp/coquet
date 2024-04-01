@@ -1,18 +1,29 @@
-@import '@/Styles/mixins'
-@import '@/Styles/typography'
+@import '../Styles/mixins'
+@import '../Styles/typography'
 
 .button
   --button-size: clamp(30px, calc(25px + 1vmax), 40px)
 
-  @include flex-center
   @include label-small
 
+  display: flex
+  align-items: center
+  gap: var(--spacing-s)
   height: var(--button-size)
-  padding: var(--spacing-m)
+  padding: var(--spacing-m) var(--spacing-xxl)
   border: solid var(--stroke-thick, 2px)
   border-radius: var(--radius-xxs, 4px)
 
+  &.icon-left
+    padding-inline: var(--spacing-l) var(--spacing-xxl)
+
+  &.icon-right
+    flex-direction: row-reverse
+    padding-inline: var(--spacing-xxl) var(--spacing-l)
+
   &.icon-size
+    padding: 0
+    justify-content: center
     width: var(--button-size)
 
   &.filled

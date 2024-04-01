@@ -5,7 +5,8 @@
   },
   "extends": [
     "next/core-web-vitals",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:storybook/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -17,21 +18,36 @@
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "semi": ["error", "never"],
-    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }]
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
   },
   "overrides": [
     {
       "env": {
         "node": true
       },
-      "files": [".eslintrc.{js,cjs}"],
+      "files": [
+        ".eslintrc.{js,cjs}"
+      ],
       "parserOptions": {
         "sourceType": "script"
       }
     },
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
       "rules": {
         "react/prop-types": "off"
       }

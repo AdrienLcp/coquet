@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "lucide-react": "^0.363.0",
@@ -23,6 +25,7 @@
     "eslint": "^8.57.0",
     "eslint-config-love": "^43.1.0",
     "eslint-config-next": "14.1.4",
+    "eslint-plugin-storybook": "^0.8.0",
     "typescript": "^5"
   }
 }

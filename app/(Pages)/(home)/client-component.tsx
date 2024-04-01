@@ -12,7 +12,7 @@ export const ClientComponent: React.FC = () => {
   return (
     <div className='client-component'>
 
-      <Button isDisabled variant='filled'>
+      <Button>
         test
       </Button>
 
