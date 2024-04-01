@@ -1,28 +1,6 @@
-@import '@/Styles/mixins'
 @import '@/Styles/typography'
 
 .dropdown
-  &__trigger
-    @include flex-center
-    @include label-small
-    padding: var(--spacing-m)
-    border: var(--stroke-thick, 2px) solid hsl(var(--neutral-stroke-rest))
-    border-radius: var(--radius-xxs, 4px)
-    width: clamp(30px, calc(25px + 1vw), 40px)
-    height: clamp(30px, calc(25px + 1vw), 40px)
-
-    &:hover
-      border-color: hsl(var(--neutral-stroke-hover))
-      background-color: hsl(var(--neutral-background-primary-hover))
-
-    &:active
-      border-color: hsl(var(--neutral-stroke-pressed))
-      background-color: hsl(var(--neutral-background-primary-pressed))
-
-    &:disabled
-      border-color: hsl(var(--neutral-stroke-disabled))
-      color: hsl(var(--neutral-foreground-disabled))
-
   &__menu
     background-color: hsl(var(--neutral-background-secondary-rest))
     padding-block: var(--spacing-s)

@@ -3,6 +3,7 @@
 import { MoonIcon, ScreenShareIcon, SunIcon } from 'lucide-react'
 import React from 'react'
 
+import { Button } from '@/Components/button'
 import { Dropdown, type Option } from '@/Components/dropdown'
 import { useI18n } from '@/I18n'
 import { type Theme, THEMES, useTheme } from '@/Theme'
@@ -41,10 +42,12 @@ export const ThemeSwitcher: React.FC = () => {
 
   return (
     <Dropdown options={themeOptions}>
-      {isDarkModeActive
-        ? <MoonIcon size={15} />
-        : <SunIcon size={15} />
-      }
+      <Button size='icon'>
+        {isDarkModeActive
+          ? <MoonIcon size={15} />
+          : <SunIcon size={15} />
+        }        
+      </Button>
     </Dropdown>
   )
 }

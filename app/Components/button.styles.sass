@@ -1,0 +1,86 @@
+@import '@/Styles/mixins'
+@import '@/Styles/typography'
+
+.button
+  --button-size: clamp(30px, calc(25px + 1vmax), 40px)
+
+  @include flex-center
+  @include label-small
+
+  height: var(--button-size)
+  padding: var(--spacing-m)
+  border: solid var(--stroke-thick, 2px)
+  border-radius: var(--radius-xxs, 4px)
+
+  &.icon-size
+    width: var(--button-size)
+
+  &.filled
+    background-color: hsl(var(--brand-background-primary-rest))
+    color: hsl(var(--neutral-foreground-onbrand-rest))
+    border-color: hsl(var(--brand-background-primary-rest))
+
+    &:hover
+      background-color: hsl(var(--brand-background-primary-hover))
+      border-color: hsl(var(--brand-background-primary-hover))
+
+    &:active
+      border-color: hsl(var(--brand-background-primary-pressed))
+      background-color: hsl(var(--brand-background-primary-pressed))
+
+    &:disabled
+      background-color: hsl(var(--neutral-background-primary-disabled))
+      color: hsl(var(--neutral-foreground-disabled))
+      border-color: hsl(var(--neutral-background-primary-disabled))
+
+  &.outlined
+    background-color: hsl(var(--neutral-background-primary-rest))
+    color: hsl(var(--neutral-foreground-rest))
+    border-color: hsl(var(--neutral-stroke-rest))
+
+    &:hover
+      background-color: hsl(var(--neutral-background-primary-hover))
+      border-color: hsl(var(--neutral-stroke-hover))
+
+    &:active
+      background-color: hsl(var(--neutral-background-primary-pressed))
+      border-color: hsl(var(--neutral-stroke-pressed))
+
+    &:disabled
+      background-color: hsl(var(--neutral-background-primary-disabled))
+      color: hsl(var(--neutral-foreground-disabled))
+      border-color: hsl(var(--neutral-stroke-disabled))
+
+  &.transparent
+    color: hsl(var(--neutral-foreground-rest))
+    border-color: transparent
+
+    &:hover
+      background-color: hsl(var(--neutral-background-primary-hover))
+
+    &:active
+      background-color: hsl(var(--neutral-background-primary-pressed))
+
+    &:disabled
+      color: hsl(var(--neutral-foreground-disabled))
+
+  &.tonal
+    background-color: hsl(var(--brand-background-secondary-rest))
+    color: hsl(var(--neutral-foreground-onbrand-rest))
+    border-color: hsl(var(--brand-background-secondary-rest))
+
+    &:hover
+      background-color: hsl(var(--brand-background-secondary-hover))
+      border-color: hsl(var(--brand-background-secondary-hover))
+
+    &:active
+      border-color: hsl(var(--brand-background-secondary-pressed))
+      background-color: hsl(var(--brand-background-secondary-pressed))
+
+    &:disabled
+      background-color: hsl(var(--neutral-background-secondary-disabled))
+      color: hsl(var(--neutral-foreground-disabled))
+      border-color: hsl(var(--neutral-background-secondary-disabled))
+
+  &:disabled
+    pointer-events: none

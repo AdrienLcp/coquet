@@ -4,6 +4,7 @@ import React from 'react'
 
 import { Dropdown, type Option } from '@/Components/dropdown'
 import { type Locale, LOCALES, useI18n } from '@/I18n'
+import { Button } from '@/Components/button'
 
 export const LocaleSwitcher: React.FC = () => {
   const { currentLocale, locales, changeLocale } = useI18n()
@@ -15,9 +16,13 @@ export const LocaleSwitcher: React.FC = () => {
     onClick: () => changeLocale(locale)
   }))
 
+  const selectedLocaleLabel = locales[currentLocale].label.slice(0, 2)
+
   return (
     <Dropdown options={localesOptions}>
-      {currentLocale}
+      <Button size='icon'>
+        {selectedLocaleLabel}
+      </Button>
     </Dropdown>
   )
 }
