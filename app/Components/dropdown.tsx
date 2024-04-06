@@ -2,7 +2,6 @@ import { CheckIcon } from 'lucide-react'
 import React from 'react'
 import { type Key, Menu, MenuItem, MenuTrigger, Popover } from 'react-aria-components'
 
-import { Pressable } from '@/Components/pressable'
 import { classNames } from '@/Helpers/styles'
 
 import './dropdown.styles.sass'
@@ -55,9 +54,7 @@ export function Dropdown <T extends string> ({ children, options }: DropdownProp
                 {option.label}                
               </div>
 
-              {Boolean(option.isSelected) && (
-                <CheckIcon size={20} />
-              )}
+              {Boolean(option.isSelected) && <CheckIcon size={20} />}
             </MenuItem>
           ))}
         </Menu>

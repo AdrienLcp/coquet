@@ -16,7 +16,7 @@ import esStrings from '@/I18n/Dictionaries/es.json'
 type Dictionary = typeof frStrings
 type I18NStringPaths = DotNestedKeys<Dictionary>
 
-export const LOCALES = ['EN', 'FR', 'ES'] as const
+export const LOCALES = ['FR', 'EN', 'ES'] as const
 
 export type Locale = typeof LOCALES[number]
 
