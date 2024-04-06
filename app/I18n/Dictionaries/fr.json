@@ -11,5 +11,11 @@
       "dark": "Sombre",
       "system": "Système"
     }
+  },
+  "pages": {
+    "404": {
+      "title": "La page que vous cherchez n'existe pas",
+      "goHome": "Revenir à l'accueil"
+    }
   }
 }

@@ -11,5 +11,11 @@
       "dark": "Oscuro",
       "system": "Sistema"
     }
+  },
+  "pages": {
+    "404": {
+      "title": "Página no encontrada",
+      "goHome": "Ir a la página de inicio"
+    }
   }
 }

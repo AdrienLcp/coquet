@@ -11,5 +11,11 @@
       "dark": "Dark",
       "system": "System"
     }
+  },
+  "pages": {
+    "404": {
+      "title": "Page not found",
+      "goHome": "Go to home"
+    }
   }
 }

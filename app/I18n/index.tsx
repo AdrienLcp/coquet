@@ -22,6 +22,21 @@ export type Locale = typeof LOCALES[number]
 
 const DEFAULT_LOCALE: Locale = 'FR' as const
 
+export const localesMap: LocalesMap = {
+  FR: {
+    label: 'Français',
+    dictionary: frStrings
+  },
+  EN: {
+    label: 'English',
+    dictionary: enStrings
+  },
+  ES: {
+    label: 'Español',
+    dictionary: esStrings
+  }
+}
+
 type LocaleInfo = {
   label: string
   dictionary: Dictionary
@@ -31,9 +46,12 @@ type LocalesMap = Record<Locale, LocaleInfo>
 
 type I18nContextValue = {
   currentLocale: Locale
-  locales: LocalesMap
   i18n: (key: I18NStringPaths, options?: Record<string, unknown>) => string
   changeLocale: (newLocale: Locale) => void
+}
+
+const isLocale = (locale: string): locale is Locale => {
+  return Object.keys(localesMap).includes(locale)
 }
 
 const I18nContext = React.createContext<I18nContextValue | null>(null)
@@ -41,22 +59,7 @@ const I18nContext = React.createContext<I18nContextValue | null>(null)
 export const I18nProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [currentLocale, setCurrentLocale] = React.useState<Locale>(DEFAULT_LOCALE)
 
-  const locales: LocalesMap = {
-    FR: {
-      label: 'Français',
-      dictionary: frStrings
-    },
-    EN: {
-      label: 'English',
-      dictionary: enStrings
-    },
-    ES: {
-      label: 'Español',
-      dictionary: esStrings
-    }
-  }
-
-  const currentDictionary = locales[currentLocale].dictionary
+  const currentDictionary = localesMap[currentLocale].dictionary
 
   const currentPolyglot = new Polyglot({
     phrases: currentDictionary as unknown as Record<string, string>
@@ -76,6 +79,13 @@ export const I18nProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
 
     if (storedLocale !== undefined) {
       setCurrentLocale(storedLocale)
+      return
+    }
+
+    const navigatorLanguage = navigator.language.slice(0, 2).toUpperCase()
+
+    if (isLocale(navigatorLanguage)) {
+      setCurrentLocale(navigatorLanguage)
     }
   }, [])
 
@@ -85,7 +95,7 @@ export const I18nProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   ) => currentPolyglot.t(key, options)
 
   return (
-    <I18nContext.Provider value={{ currentLocale, locales, i18n, changeLocale }}>
+    <I18nContext.Provider value={{ currentLocale, i18n, changeLocale }}>
       {children}
     </I18nContext.Provider>
   )

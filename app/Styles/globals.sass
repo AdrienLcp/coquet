@@ -43,5 +43,20 @@ body
   font-family: var(--font-base)
   overflow-x: hidden
 
+main
+  display: flex
+  flex: 1
+
 h1, h2, h3, h4, h5, h6
   font-family: var(--font-title)
+
+.not-found
+  display: flex
+  flex-direction: column
+  align-items: center
+  flex: 1
+  gap: var(--spacing-xxxxl)
+  padding-top: 25svh
+
+  &__title
+    @include title-large
