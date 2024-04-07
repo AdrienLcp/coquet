@@ -1,9 +1,9 @@
 {
   "app": {
-    "name": "El Moment Coquet",
-    "shortName": "EMC",
+    "name": "Le Moment Coquet",
+    "shortName": "LMC",
     "description": "Des mega massages de la mort qui tue",
-    "logoAlt": "Logo de El Moment Coquet"
+    "logoAlt": "Logo de Le Moment Coquet"
   },
   "features": {
     "theme": {

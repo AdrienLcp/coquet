@@ -1,13 +1,7 @@
 'use client'
 
-import { Logo } from '@/Components/logo'
+import { Loader } from '@/Components/loader'
 
-export const Loading: React.FC = () => (
-  <div className='loader'>
-    <div className='loader__logo'>
-      <Logo size='large' />
-    </div>
-  </div>
-)
+const Loading: React.FC = () => <Loader />
 
 export default Loading

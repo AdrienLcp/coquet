@@ -5,15 +5,16 @@ import React from 'react'
 
 import { useI18n } from '@/I18n'
 
-import logoLarge from '@/Assets/Logo/logo-large.png'
-import logoMedium from '@/Assets/Logo/logo-medium.png'
 import logoSmall from '@/Assets/Logo/logo-small.png'
+import logoMedium from '@/Assets/Logo/logo-medium.png'
+import logoLarge from '@/Assets/Logo/logo-large.png'
+import logoXLarge from '@/Assets/Logo/logo-x-large.png'
 
 import './logo.styles.sass'
 
-type LogoSize = 'large' | 'medium' | 'small'
+type LogoSize = 'small' | 'medium' | 'large' | 'xLarge'
 
-type LogoProps = {
+export type LogoProps = {
   size?: LogoSize
 }
 
@@ -23,20 +24,21 @@ type ImageInfo = {
 }
 
 const logoMap: Record<LogoSize, ImageInfo> = {
-  large: { url: logoLarge, size: 96 },
+  small: { url: logoSmall, size: 24 },
   medium: { url: logoMedium, size: 48 },
-  small: { url: logoSmall, size: 24 }
+  large: { url: logoLarge, size: 96 },
+  xLarge: { url: logoXLarge, size: 192 }
 }
 
 export const Logo: React.FC<LogoProps> = ({ size = 'medium' }) => {
   const { i18n } = useI18n()
-  const currentImage = logoMap[size]
+  const currentLogo = logoMap[size]
 
   return (
     <Image
-      src={currentImage.url}
-      width={currentImage.size}
-      height={currentImage.size}
+      src={currentLogo.url}
+      width={currentLogo.size}
+      height={currentLogo.size}
       className={`logo ${size}`}
       alt={i18n('app.logoAlt')}
       placeholder='blur'

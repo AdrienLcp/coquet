@@ -35,3 +35,13 @@
 
 @mixin breath
   animation: breath var(--transition-2000) var(--timing, ease-in-out) infinite
+
+@keyframes rotate3d
+  from
+    transform: rotateY(0deg)
+  to
+    transform: rotateY(360deg)
+
+@mixin rotate3d
+  transform-style: preserve-3d
+  animation: rotate3d var(--transition-3000) var(--timing, ease-in-out) infinite
