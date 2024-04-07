@@ -51,7 +51,7 @@ export function Dropdown <T extends string> ({ children, options }: DropdownProp
               <div className='dropdown__menu__option__box'>
                 {option.Icon !== undefined && option.Icon}
 
-                {option.label}                
+                {option.label}
               </div>
 
               {Boolean(option.isSelected) && <CheckIcon size={20} />}

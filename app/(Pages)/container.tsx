@@ -1,19 +1,19 @@
 'use client'
 
 import React from 'react'
-import { K2D, MuseoModerno } from 'next/font/google'
+import { Josefin_Sans } from 'next/font/google'
 
 import { classNames } from '@/Helpers/styles'
 import { useI18n } from '@/I18n'
 import { useTheme } from '@/Theme'
 
-const titleFont = MuseoModerno({
+const titleFont = Josefin_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
   variable: '--font-title'
 })
 
-const baseFont = K2D({
+const baseFont = Josefin_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
   variable: '--font-base'

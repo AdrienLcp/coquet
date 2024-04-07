@@ -1,7 +1,13 @@
 'use client'
 
+import { Logo } from '@/Components/logo'
+
 export const Loading: React.FC = () => (
-  <h1>Loading...</h1>
+  <div className='loader'>
+    <div className='loader__logo'>
+      <Logo size='large' />
+    </div>
+  </div>
 )
 
 export default Loading
