@@ -4,17 +4,13 @@ import React from 'react'
 import { Container } from '@/(Pages)/container'
 import { Footer } from '@/(Pages)/footer'
 import { Header } from '@/(Pages)/header'
-import { ThemeProvider } from '@/Theme'
+import { COMMON_METADATA } from '@/Config/metadata'
 import { I18nProvider } from '@/I18n'
+import { ThemeProvider } from '@/Theme'
 
 import '@/Styles/globals.sass'
 
-export const metadata: Metadata = {
-  title: 'El Moment Coquet',
-  description: 'Coiffure etc',
-  twitter: {
-  }
-}
+export const metadata: Metadata = { ...COMMON_METADATA }
 
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
   <I18nProvider>

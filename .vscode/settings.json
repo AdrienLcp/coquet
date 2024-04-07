@@ -19,6 +19,11 @@
     "titleBar.inactiveForeground": "#15202b99"
   },
   "peacock.color": "#f9e64f",
+  "cSpell.ignorePaths": [
+    "app/I18n/Dictionaries/**.json",
+    "app/Config/metadata.ts",
+    "/manifest.json"
+  ],
   "cSpell.words": [
     "Lucide",
     "moderno",
