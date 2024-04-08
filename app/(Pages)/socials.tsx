@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
+import { FacebookIcon } from '@/Assets/Icons/facebook'
+import { InstagramIcon } from '@/Assets/Icons/instagram'
+import { TikTokIcon } from '@/Assets/Icons/tik-tok'
+
 import './socials.styles.sass'
 
 type SocialNetwork = {
@@ -13,17 +17,17 @@ const socialsNetworks: SocialNetwork[] = [
   {
     key: 'Facebook',
     url: 'https://www.facebook.com/profile.php?id=61557566169594',
-    Icon: <></>
+    Icon: <FacebookIcon />
   },
   {
     key: 'Instagram',
     url: 'https://www.instagram.com/lmc_le_moment_cocooning',
-    Icon: <></>
+    Icon: <InstagramIcon />
   },
   {
     key: 'TikTok',
     url: 'https://www.tiktok.com/@lmcmarie',
-    Icon: <></>
+    Icon: <TikTokIcon />
   }
 ]
 

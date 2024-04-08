@@ -2,10 +2,10 @@ import { CheckIcon } from 'lucide-react'
 import React from 'react'
 import { type Key, Menu, MenuItem, MenuTrigger, Popover } from 'react-aria-components'
 
+import { Motion } from '@/Components/motion'
 import { classNames } from '@/Helpers/styles'
 
 import './dropdown.styles.sass'
-import { Motion } from '@/Components/motion'
 
 export type Option <T> = {
   key: T
@@ -36,7 +36,7 @@ export function Dropdown <T extends string> ({ children, options }: DropdownProp
       {children}
 
       <Popover offset={5} onOpenChange={setIsDropdownOpen}>
-        <Motion animation='Accordion'>
+        <Motion animation='accordion'>
           <Menu
             selectedKeys={options.filter(option => Boolean(option.isSelected)).map(option => option.key)}
             onAction={handleClickOption}

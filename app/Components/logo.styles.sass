@@ -7,18 +7,21 @@
   display: flex
   align-items: center
 
+  &.column
+    flex-direction: column
+
   &.small
     @include title-small
-    gap: var(--spacing-s)
+    gap: var(--spacing-xxs)
 
   &.medium
     @include headline-small
-    gap: var(--spacing-xxl)
+    gap: var(--spacing-m)
 
   &.large
-    @include display-small
-    gap: var(--spacing-xxxxxl)
+    @include display-large
+    gap: var(--spacing-xl)
 
   &.xLarge
     @include display-large
-    gap: var(--spacing-xxxxxxl)
+    gap: var(--spacing-xxxl)

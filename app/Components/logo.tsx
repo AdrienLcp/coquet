@@ -27,7 +27,7 @@ const logoMap: Record<LogoSize, ImageInfo> = {
   small: { url: logoSmall, size: 24 },
   medium: { url: logoMedium, size: 48 },
   large: { url: logoLarge, size: 96 },
-  xLarge: { url: logoXLarge, size: 192 }
+  xLarge: { url: logoXLarge, size: 144 }
 }
 
 export const Logo: React.FC<LogoProps> = ({ size = 'medium' }) => {
@@ -47,14 +47,18 @@ export const Logo: React.FC<LogoProps> = ({ size = 'medium' }) => {
   )
 }
 
-export const LogoTitle: React.FC<LogoProps> = ({ size = 'medium' }) => {
+type LogoTitleProps = LogoProps & {
+  direction?: 'row' | 'column'
+}
+
+export const LogoTitle: React.FC<LogoTitleProps> = ({ size = 'medium', direction = 'row' }) => {
   const { i18n } = useI18n()
 
   return (
-    <div className={`logo-title ${size}`}>
+    <section className={`logo-title ${size} ${direction}`}>
       <Logo size={size} />
 
       <h1>{i18n('app.name')}</h1>
-    </div>
+    </section>
   )
 }

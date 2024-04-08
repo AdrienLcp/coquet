@@ -9,8 +9,8 @@ import './header.styles.sass'
 
 export const Header: React.FC = () => (
   <header className='header'>
-    <Motion animation='Scale'>
-      <LogoTitle />
+    <Motion animation='scale'>
+      <LogoTitle direction='column' />
     </Motion>
 
     <div className='header__params-controls'>
