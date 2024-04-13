@@ -1,4 +1,5 @@
 {
+  "manifest_version": 2,
   "short_name": "LMC",
   "name": "Le Moment Cocooning",
   "author": "Marie Ploteau",
@@ -10,10 +11,10 @@
     }
   ],
   "start_url": "/",
-  "background_color": "#000000",
+  "background_color": "#0a0a0a",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#000000",
+  "theme_color": "#0a0a0a",
   "default_locale": "fr",
   "description": "Le Moment Cocooning - Massages thérapeutiques à Vair-sur-Loire par Marie Ploteau",
   "developer": {

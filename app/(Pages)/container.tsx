@@ -1,7 +1,7 @@
 'use client'
 
-import React from 'react'
 import { Josefin_Sans } from 'next/font/google'
+import React from 'react'
 
 import { classNames } from '@/Helpers/styles'
 import { useI18n } from '@/I18n'

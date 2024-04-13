@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   ...COMMON_METADATA,
   openGraph: {
     ...COMMON_METADATA.openGraph,
-    type: 'profile'
+    type: 'profile',
+    firstName: 'Marie',
+    lastName: 'Ploteau',
+    username: 'Le Moment Cocooning',
+    gender: 'Female'
   }
 }
 
