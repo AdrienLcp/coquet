@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 
-import manifest from '../manifest'
+import getManifest from '../manifest'
+
+const manifest = getManifest()
 
 const KEYWORDS = [
   'amincissant',

@@ -40,9 +40,10 @@ export const Logo: React.FC<LogoProps> = ({ size = 'medium' }) => {
       width={currentLogo.size}
       height={currentLogo.size}
       className={`logo ${size}`}
-      alt={i18n('app.logoAlt')}
       placeholder='blur'
-      priority={true}
+      blurDataURL={currentLogo.url.blurDataURL}
+      alt={i18n('app.logoAlt')}
+      loading='lazy'
     />
   )
 }

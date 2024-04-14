@@ -6,7 +6,6 @@ import { COMMON_METADATA } from '@/Config/metadata'
 export const metadata: Metadata = {
   ...COMMON_METADATA,
   openGraph: {
-    ...COMMON_METADATA.openGraph,
     type: 'profile',
     firstName: 'Marie',
     lastName: 'Ploteau',
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 
 const About: React.FC = () => (
   <>
-    Présentation de Marie
   </>
 )
 
