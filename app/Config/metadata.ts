@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import manifest from '../../manifest.json'
+import manifest from '../manifest'
 
 const KEYWORDS = [
   'amincissant',
@@ -26,10 +26,10 @@ export const APP = {
   SHORT_NAME: manifest.short_name,
   TITLE: {
     default: manifest.name,
-    template: '%s | Massages thérapeutiques à Vair-sur-Loire'
+    template: `%s | ${manifest.description}`
   },
   DESCRIPTION: manifest.description,
-  URL: manifest.homepage_url,
+  URL: 'https://www.lmc-massages.com',
   IMAGES: [
     {
       url: '../Assets/Logo/logo-x-large.png',
@@ -39,11 +39,11 @@ export const APP = {
     }
   ],
   CREATOR: {
-    NAME: manifest.author,
+    NAME: 'Marie Ploteau',
     EMAILS: ['lmc.massages@gmail.com'],
     PHONE_NUMBERS: ['06.62.46.03.13']
   },
-  LOCALE: manifest.default_locale,
+  LOCALE: manifest.lang,
   ALTERNATE_LOCALES: ['en-US', 'es-ES'],
   COUNTRY_NAME: 'France',
   KEYWORDS: KEYWORDS,
@@ -80,7 +80,7 @@ export const COMMON_METADATA: Metadata = {
     index: true
   },
   icons: APP.ICONS,
-  manifest: '/manifest.json',
+  manifest: '/app/manifest.json',
   formatDetection: {
     telephone: true,
     date: true,

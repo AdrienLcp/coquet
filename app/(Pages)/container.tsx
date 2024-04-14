@@ -20,8 +20,8 @@ const baseFont = Josefin_Sans({
 })
 
 export const Container: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const { isDarkModeActive } = useTheme()
   const { currentLocale } = useI18n()
+  const { isDarkModeActive } = useTheme()
 
   return (
     <html lang={currentLocale.toLowerCase()}>

@@ -22,13 +22,14 @@
   "cSpell.ignorePaths": [
     "app/I18n/Dictionaries/**.json",
     "app/Config/metadata.ts",
-    "/manifest.json"
+    "app/manifest.ts"
   ],
   "cSpell.words": [
     "Lucide",
     "moderno",
     "museo",
     "nextjs",
+    "Ploteau",
     "Pressable"
   ]
 }
