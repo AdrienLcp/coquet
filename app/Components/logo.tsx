@@ -42,7 +42,7 @@ export const Logo: React.FC<LogoProps> = ({ size = 'medium' }) => {
       className={`logo ${size}`}
       placeholder='blur'
       blurDataURL={currentLogo.url.blurDataURL}
-      alt={i18n('app.logoAlt')}
+      alt={i18n('app.logo-alt')}
       loading='lazy'
     />
   )

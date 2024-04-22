@@ -1,9 +1,50 @@
 {
   "app": {
     "name": "Le Moment Coquet",
-    "shortName": "LMC",
+    "short-name": "LMC",
     "description": "Great massages",
-    "logoAlt": "Le Moment Coquet logo"
+    "logo-alt": "Le Moment Coquet logo"
+  },
+  "domain": {
+    "massages": {
+      "minutes": "",
+      "euros": "€",
+      "lymphatic-drainage": {
+        "title": "",
+        "description": "",
+        "slug": ""
+      },
+      "maderotherapy-body": {
+        "title": "",
+        "description": "",
+        "slug": ""
+      },
+      "maderotherapy-body-and-face": {
+        "title": "",
+        "description": "",
+        "slug": ""
+      },
+      "maderotherapy-face": {
+        "title": "",
+        "description": "",
+        "slug": ""
+      },
+      "scalp": {
+        "title": "",
+        "description": "",
+        "slug": ""
+      },
+      "zone": {
+        "title": "",
+        "description": "",
+        "slug": ""
+      },
+      "zone-mixed-methods": {
+        "title": "",
+        "description": "",
+        "slug": ""
+      }
+    }
   },
   "features": {
     "theme": {
@@ -13,9 +54,9 @@
     }
   },
   "pages": {
-    "404": {
+    "not-found": {
       "title": "Page not found",
-      "goHome": "Go to home"
+      "go-home": "Go to home"
     }
   }
 }

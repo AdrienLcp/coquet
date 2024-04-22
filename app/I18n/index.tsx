@@ -4,16 +4,16 @@ import React from 'react'
 
 import Polyglot from './polyglot.js'
 
-import type { DotNestedKeys } from '@/Helpers/strings.js'
-import { getStoredItem, storeItem } from '@/Helpers/local-storage'
 import { useProvidedContext } from '@/Helpers/contexts'
+import { getStoredItem, storeItem } from '@/Helpers/local-storage'
+import type { DotNestedKeys } from '@/Helpers/strings.js'
 
 import frStrings from '@/I18n/Dictionaries/fr.json'
 import enStrings from '@/I18n/Dictionaries/en.json'
 import esStrings from '@/I18n/Dictionaries/es.json'
 
-
 type Dictionary = typeof frStrings
+
 type I18NStringPaths = DotNestedKeys<Dictionary>
 
 export const LOCALES = ['FR', 'EN', 'ES'] as const

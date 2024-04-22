@@ -6,13 +6,14 @@ import { useI18n } from '@/I18n'
 
 import './page.styles.sass'
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   const { i18n } = useI18n()
 
   return (
-    <div className='home'>
-    </div>
+    <>
+      {i18n('app.description')}
+    </>
   )
 }
 
-export default Home
+export default HomePage

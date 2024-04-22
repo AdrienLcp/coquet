@@ -1,9 +1,50 @@
 {
   "app": {
     "name": "Le Moment Coquet",
-    "shortName": "LMC",
+    "short-name": "LMC",
     "description": "Des mega massages de la mort qui tue",
-    "logoAlt": "Logo de Le Moment Coquet"
+    "logo-alt": "Logo de Le Moment Coquet"
+  },
+  "domain": {
+    "massages": {
+      "minutes": "minutes",
+      "euros": "€",
+      "lymphatic-drainage": {
+        "title": "Madérothérapie + Drainage Lympathique",
+        "description": "",
+        "slug": "maderotherapie-et-drainage-lymphatique"
+      },
+      "maderotherapy-body": {
+        "title": "Madérothérapie corps",
+        "description": "",
+        "slug": "maderotherapie-corps"
+      },
+      "maderotherapy-body-and-face": {
+        "title": "Madérothérapie corps et visage",
+        "description": "",
+        "slug": "maderotherapie-corps-et-visage"
+      },
+      "maderotherapy-face": {
+        "title": "Madérothérapie visage",
+        "description": "",
+        "slug": "maderotherapie-visage"
+      },
+      "scalp": {
+        "title": "Cuir chevelu + soin personnalisé",
+        "description": "",
+        "slug": "massage-du-cuir-chevelu"
+      },
+      "zone": {
+        "title": "Par zone(s)",
+        "description": "",
+        "slug": "par-zone"
+      },
+      "zone-mixed-methods": {
+        "title": "Par zone(s) - Méthodes mixtes",
+        "description": "",
+        "slug": "par-zone-methodes-mixtes"
+      }
+    }
   },
   "features": {
     "theme": {
@@ -13,9 +54,9 @@
     }
   },
   "pages": {
-    "404": {
+    "not-found": {
       "title": "La page que vous cherchez n'existe pas",
-      "goHome": "Revenir à l'accueil"
+      "go-home": "Revenir à l'accueil"
     }
   }
 }

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const About: React.FC = () => (
   <>
+
   </>
 )
 
