@@ -1,0 +1,23 @@
+@import '@/Styles/mixins'
+@import '@/Styles/typography'
+
+.navbar
+  display: flex
+  align-items: center
+
+  &__link
+    @include label-medium
+    @include flex-center
+    flex-direction: column
+    gap: var(--spacing-xxs)
+    padding-block: var(--spacing-m) var(--spacing-xxs)
+    min-width: calc(var(--navbar-link-width, calc(var(--font-size-xxs) * 8)) + var(--spacing-m))
+    border-radius: var(--radius-s)
+    text-align: center
+
+    &:hover
+      background-color: hsl(var(--neutral-background-primary-hover))
+
+    &:active
+      background-color: hsl(var(--neutral-background-primary-pressed))
+

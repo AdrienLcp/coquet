@@ -58,6 +58,11 @@
     "not-found": {
       "title": "Página no encontrada",
       "go-home": "Ir a la página de inicio"
+    },
+    "links": {
+      "home": "Inicio",
+      "massages": "Masajes",
+      "about": "Acerca de mí"
     }
   }
 }

@@ -1,9 +1,15 @@
+@import '@/Styles/mixins'
+
 .header
+  @include flex-center
+  flex-direction: column
+  gap: var(--spacing-m)
   position: relative
-  display: flex
-  align-items: center
-  justify-content: center
   min-height: clamp(10rem, 25vh, 20rem)
+
+  &__logo
+    @include flex-center
+    flex: 1
 
   &__params-controls
     position: absolute

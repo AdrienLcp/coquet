@@ -35,9 +35,11 @@ export const Button: React.FC<ButtonProps> = ({
         className
       )}
     >
-      {hasIcon && <Icon size={15} />}
+      <>
+        {hasIcon && <Icon size={15} />}
 
-      <>{children}</>
+        {children}
+      </>
     </Pressable>
   )
 }

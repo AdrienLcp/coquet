@@ -3,13 +3,22 @@
 .massage-card
   --massage-card-padding: var(--spacing-l)
   --massage-card-radius: var(--radius-s)
+
   padding: var(--massage-card-padding)
   border-radius: var(--massage-card-radius)
 
+  &:hover
+    background-color: hsl(var(--neutral-background-secondary-hover))
+
+  &:active
+    background-color: hsl(var(--neutral-background-secondary-pressed))
+
+  &__wrapper
+    width: 100%
+
   &__image
-    width: 200px
-    height: 200px
-    // article border radius - article padding
+    height: 100%
+    aspect-ratio: 1 / 1
     border-radius: calc(var(--massage-card-padding) - var(--massage-card-radius))
 
   &__details

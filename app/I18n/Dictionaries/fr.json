@@ -58,6 +58,11 @@
     "not-found": {
       "title": "La page que vous cherchez n'existe pas",
       "go-home": "Revenir à l'accueil"
+    },
+    "links": {
+      "home": "Accueil",
+      "massages": "Massages",
+      "about": "À propos de moi"
     }
   }
 }

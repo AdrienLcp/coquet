@@ -58,6 +58,11 @@
     "not-found": {
       "title": "Page not found",
       "go-home": "Go to home"
+    },
+    "links": {
+      "home": "Home",
+      "massages": "Massages",
+      "about": "About me"
     }
   }
 }

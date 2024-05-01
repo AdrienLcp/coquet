@@ -7,6 +7,7 @@ type Animation = 'accordion' | 'scale'
 
 type MotionProps = FramerMotionProps & {
   animation: Animation
+  className?: string
 }
 
 const animationsMap: Record<Animation, AnimationProps> = {
@@ -22,11 +23,11 @@ const animationsMap: Record<Animation, AnimationProps> = {
   }
 }
 
-export const Motion: React.FC<MotionProps> = ({ animation, children, ...props }) => {
+export const Motion: React.FC<MotionProps> = ({ animation, children, className, ...props }) => {
   const animationsProps = animationsMap[animation]
 
   return (
-    <motion.div {...animationsProps} {...props}>
+    <motion.div {...animationsProps} {...props} className={className}>
       {children}
     </motion.div>
   )
