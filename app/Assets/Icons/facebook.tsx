@@ -4,8 +4,6 @@ import { baseIconProps, type IconProps } from '@/Assets/Icons/icons.base'
 
 export const FacebookIcon: React.FC<IconProps> = ({ ...props }) => (
   <svg
-    viewBox='0 0 24 24'
-    fill='currentColor'
     {...baseIconProps}
     {...props}
   >

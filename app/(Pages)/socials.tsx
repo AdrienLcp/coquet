@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import { FacebookIcon } from '@/Assets/Icons/facebook'
+import type { IconElement } from '@/Assets/Icons/icons.base'
 import { InstagramIcon } from '@/Assets/Icons/instagram'
 import { TikTokIcon } from '@/Assets/Icons/tik-tok'
 
@@ -10,39 +11,38 @@ import './socials.styles.sass'
 type SocialNetwork = {
   key: string
   url: string
-  Icon: React.ReactNode
+  Icon: IconElement
 }
 
 const socialsNetworks: SocialNetwork[] = [
   {
     key: 'Facebook',
     url: 'https://www.facebook.com/profile.php?id=61557566169594',
-    Icon: <FacebookIcon />
+    Icon: FacebookIcon
   },
   {
     key: 'Instagram',
     url: 'https://www.instagram.com/lmc_le_moment_cocooning',
-    Icon: <InstagramIcon />
+    Icon: InstagramIcon
   },
   {
     key: 'TikTok',
     url: 'https://www.tiktok.com/@lmcmarie',
-    Icon: <TikTokIcon />
+    Icon: TikTokIcon
   }
 ]
 
-export const Socials: React.FC = () => {
-  return (
-    <div className='socials'>
-      {socialsNetworks.map(({ key, url, Icon }) => (
+export const Socials: React.FC = () => (
+  <ul className='socials'>
+    {socialsNetworks.map(({ key, url, Icon }) => (
+      <li key={key}>
         <Link
           href={url}
-          key={key}
           className='socials__link'
         >
-          {Icon}
+          <Icon />
         </Link>
-      ))}
-    </div>
-  )
-}
+      </li>
+    ))}
+  </ul>
+)

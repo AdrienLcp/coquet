@@ -27,11 +27,17 @@
     &:active
       background-color: hsl(var(--brand-background-secondary-pressed))
 
+::selection
+  background-color: hsl(var(--brand-background-primary-rest))
+  color: hsl(var(--neutral-foreground-onbrand-rest))
+
 html
   scroll-behavior: smooth
   color-scheme: dark light
 
 body
+  @include body-large
+  -webkit-tap-highlight-color: transparent
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   width: 100vw
@@ -41,6 +47,8 @@ body
   background-color: hsl(var(--neutral-background-primary-rest))
   color: hsl(var(--neutral-foreground-rest))
   font-family: var(--font-base)
+  line-height: 1.6
+  letter-spacing: 0.025ch
   overflow-x: hidden
   transition-property: color, background-color
   transition-duration: var(--transition-400)
@@ -49,11 +57,18 @@ body
 main
   display: flex
   flex-direction: column
-  flex: 2
-  padding-block: clamp(5rem, 10vh, 10rem)
+  gap: var(--spacing-xxxxl)
+  flex: 1
+  margin-inline: auto
+  padding-block: clamp(2rem, 8vh, 10rem)
+  width: clamp(250px, 95vw, 1000px)
 
 h1, h2, h3, h4, h5, h6
   font-family: var(--font-title)
+
+.page-title
+  @include title-large
+  margin-inline: auto
 
 .not-found
   @include flex-center

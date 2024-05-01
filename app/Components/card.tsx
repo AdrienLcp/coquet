@@ -2,13 +2,13 @@ import React from 'react'
 
 import { classNames } from '@/Helpers/styles'
 
-import './article.styles.sass'
+import './card.styles.sass'
 
-type ArticleProps = React.ComponentProps<'article'> & {
+type CardProps = React.ComponentProps<'article'> & {
   isReversed?: boolean
 }
 
-export const Article: React.FC<ArticleProps> = ({
+export const Card: React.FC<CardProps> = ({
   className,
   children,
   isReversed,

@@ -1,18 +1,18 @@
-'use client'
-
 import React from 'react'
-
-import { useI18n } from '@/I18n'
 
 import './page.styles.sass'
 
-const HomePage: React.FC = () => {
-  const { i18n } = useI18n()
+const HomePage: React.FC = async () => {
 
   return (
-    <>
-      {i18n('app.description')}
-    </>
+    <div className='home-page'>
+      test
+      {/* <Link href='/massages'>
+        <Button>
+          Massages
+        </Button>
+      </Link> */}
+    </div>
   )
 }
 

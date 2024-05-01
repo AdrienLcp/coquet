@@ -1,3 +1,9 @@
+import type { StaticImageData } from 'next/image'
+
+import bedLandscape from '@/Assets/Images/bed-landscape.jpg'
+import bedPortrait from '@/Assets/Images/bed-portrait.jpg'
+import napKins from '@/Assets/Images/napkins.jpg'
+
 export const MASSAGES = [
   'lymphatic-drainage',
   'maderotherapy-body',
@@ -9,60 +15,87 @@ export const MASSAGES = [
 ] as const
 
 export type Massage = typeof MASSAGES[number]
+
 export type Offer = {
   durationInMin: number
   priceInEuros: number
 }
 
-export const massagesOffers: Record<Massage, Offer[]> = {
-  'scalp': [
-    {
-      durationInMin: 30,
-      priceInEuros: 45
-    }
-  ],
-  'maderotherapy-body': [
-    {
-      durationInMin: 60,
-      priceInEuros: 90
-    },
-    {
-      durationInMin: 90,
-      priceInEuros: 130
-    },
-    {
-      durationInMin: 120,
-      priceInEuros: 170
-    }
-  ],
-  'zone': [
-    {
-      durationInMin: 30,
-      priceInEuros: 50
-    }
-  ],
-  'zone-mixed-methods': [
-    {
-      durationInMin: 30,
-      priceInEuros: 55
-    }
-  ],
-  'maderotherapy-face': [
-    {
-      durationInMin: 45,
-      priceInEuros: 55
-    }
-  ],
-  'maderotherapy-body-and-face': [
-    {
-      durationInMin: 105,
-      priceInEuros: 140
-    }
-  ],
-  'lymphatic-drainage': [
-    {
-      durationInMin: 120,
-      priceInEuros: 170
-    }
-  ]
+export type MassageInfo = {
+  image: StaticImageData
+  offers: Offer[]
+}
+
+export const massagesOffers: Record<Massage, MassageInfo> = {
+  'scalp': {
+    image: bedLandscape,
+    offers: [
+      {
+        durationInMin: 30,
+        priceInEuros: 45
+      }
+    ]
+  },
+  'maderotherapy-body': {
+    image: bedPortrait,
+    offers: [
+      {
+        durationInMin: 60,
+        priceInEuros: 90
+      },
+      {
+        durationInMin: 90,
+        priceInEuros: 130
+      },
+      {
+        durationInMin: 120,
+        priceInEuros: 170
+      }
+    ],
+  },
+  'zone': {
+    image: napKins,
+    offers: [
+      {
+        durationInMin: 30,
+        priceInEuros: 50
+      }
+    ],
+  },
+  'zone-mixed-methods': {
+    image: bedLandscape,
+    offers: [
+      {
+        durationInMin: 30,
+        priceInEuros: 55
+      }
+    ],
+  },
+  'maderotherapy-face': {
+    image: bedPortrait,
+    offers: [
+      {
+        durationInMin: 45,
+        priceInEuros: 55
+      }
+    ],
+  },
+  'maderotherapy-body-and-face': {
+    image: napKins,
+    offers: [
+      {
+        durationInMin: 105,
+        priceInEuros: 140
+      }
+    ],
+  },
+  'lymphatic-drainage': {
+    image: bedLandscape,
+    offers: [
+      {
+        durationInMin: 120,
+        priceInEuros: 170
+      }
+    ]
+  }
 }
