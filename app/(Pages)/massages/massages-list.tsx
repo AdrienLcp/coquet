@@ -3,14 +3,13 @@
 import React from 'react'
 
 import { MassageCard } from '@/(Pages)/massages/massage-card'
-import { MASSAGES, type Massage, massagesOffers, type MassageInfo } from '@/Domain/massages'
+import { MASSAGES_KEY, type MassageKey, massagesOffers, type MassageInfo } from '@/Domain/massages'
 import { useI18n } from '@/I18n'
 
 import './massages-list.styles.sass'
 
 export type MassageDisplay = MassageInfo & {
-  key: Massage
-  slug: string
+  key: MassageKey
   title: string
   description: string
 }
@@ -18,9 +17,8 @@ export type MassageDisplay = MassageInfo & {
 export const MassagesList: React.FC = () => {
   const { i18n } = useI18n()
 
-  const massages: MassageDisplay[] = MASSAGES.map(key => ({
+  const massages: MassageDisplay[] = MASSAGES_KEY.map(key => ({
     key,
-    slug: i18n(`domain.massages.${key}.slug`),
     title: i18n(`domain.massages.${key}.title`),
     description: i18n(`domain.massages.${key}.description`),
     image: massagesOffers[key].image,

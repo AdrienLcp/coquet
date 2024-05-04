@@ -7,43 +7,35 @@
   },
   "domain": {
     "massages": {
-      "listPageTitle": "",
       "minutes": "",
       "euros": "€",
       "lymphatic-drainage": {
         "title": "",
-        "description": "",
-        "slug": ""
+        "description": ""
       },
       "maderotherapy-body": {
         "title": "",
-        "description": "",
-        "slug": ""
+        "description": ""
       },
       "maderotherapy-body-and-face": {
         "title": "",
-        "description": "",
-        "slug": ""
+        "description": ""
       },
       "maderotherapy-face": {
         "title": "",
-        "description": "",
-        "slug": ""
+        "description": ""
       },
       "scalp": {
         "title": "",
-        "description": "",
-        "slug": ""
+        "description": ""
       },
       "zone": {
         "title": "",
-        "description": "",
-        "slug": ""
+        "description": ""
       },
       "zone-mixed-methods": {
         "title": "",
-        "description": "",
-        "slug": ""
+        "description": ""
       }
     }
   },
@@ -54,15 +46,27 @@
       "system": "Sistema"
     }
   },
+  "layouts": {
+    "header": {
+      "background-alt": "Mesa de masajes"
+    }
+  },
   "pages": {
+    "about": {
+      "title": "Marie Ploteau",
+      "link-label": "Acerca de mí"
+    },
+    "home": {
+      "title": "Inicio",
+      "link-label": "Inicio"
+    },
+    "massages": {
+      "title": "",
+      "link-label": "Masajes"
+    },
     "not-found": {
       "title": "Página no encontrada",
       "go-home": "Ir a la página de inicio"
-    },
-    "links": {
-      "home": "Inicio",
-      "massages": "Masajes",
-      "about": "Acerca de mí"
     }
   }
 }

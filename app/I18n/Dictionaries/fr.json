@@ -7,43 +7,35 @@
   },
   "domain": {
     "massages": {
-      "listPageTitle": "Mes offres de massage",
       "minutes": "minutes",
       "euros": "€",
       "lymphatic-drainage": {
-        "title": "Madérothérapie + Drainage Lympathique",
-        "description": "",
-        "slug": "maderotherapie-et-drainage-lymphatique"
+        "title": "Madérothérapie + Drainage lymphatique",
+        "description": ""
       },
       "maderotherapy-body": {
         "title": "Madérothérapie corps",
-        "description": "",
-        "slug": "maderotherapie-corps"
+        "description": ""
       },
       "maderotherapy-body-and-face": {
         "title": "Madérothérapie corps et visage",
-        "description": "",
-        "slug": "maderotherapie-corps-et-visage"
+        "description": ""
       },
       "maderotherapy-face": {
         "title": "Madérothérapie visage",
-        "description": "",
-        "slug": "maderotherapie-visage"
+        "description": ""
       },
       "scalp": {
         "title": "Cuir chevelu + soin personnalisé",
-        "description": "",
-        "slug": "massage-du-cuir-chevelu"
+        "description": ""
       },
       "zone": {
         "title": "Par zone(s)",
-        "description": "",
-        "slug": "par-zone"
+        "description": ""
       },
       "zone-mixed-methods": {
         "title": "Par zone(s) - Méthodes mixtes",
-        "description": "",
-        "slug": "par-zone-methodes-mixtes"
+        "description": ""
       }
     }
   },
@@ -54,15 +46,27 @@
       "system": "Système"
     }
   },
+  "layouts": {
+    "header": {
+      "background-alt": "Table de massage"
+    }
+  },
   "pages": {
+    "about": {
+      "title": "Marie Ploteau",
+      "link-label": "À propos de moi"
+    },
+    "home": {
+      "title": "Accueil",
+      "link-label": "Accueil"
+    },
+    "massages": {
+      "title": "Mes offres de massages",
+      "link-label": "Liste des massages"
+    },
     "not-found": {
       "title": "La page que vous cherchez n'existe pas",
       "go-home": "Revenir à l'accueil"
-    },
-    "links": {
-      "home": "Accueil",
-      "massages": "Massages",
-      "about": "À propos de moi"
     }
   }
 }

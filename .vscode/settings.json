@@ -20,12 +20,27 @@
   },
   "peacock.color": "#f9e64f",
   "cSpell.ignorePaths": [
-    "app/I18n/Dictionaries/**.json",
     "app/Config/**.ts",
     "app/manifest.ts"
   ],
+  "cSpell.overrides": [
+    {
+      "filename": "app/I18n/Dictionaries/en.json",
+      "language": "en"
+    },
+    {
+      "filename": "app/I18n/Dictionaries/es.json",
+      "language": "en,es"
+    },
+    {
+      "filename": "app/I18n/Dictionaries/fr.json",
+      "language": "en,fr"
+    }
+  ],
   "cSpell.words": [
     "Lucide",
+    "maderotherapie",
+    "Madérothérapie",
     "maderotherapy",
     "moderno",
     "museo",

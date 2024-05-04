@@ -28,20 +28,18 @@ type NavLink = {
 export const Navbar: React.FC = () => {
   const { i18n } = useI18n()
 
-  const navLinks: NavLink[] = getObjectKeys(ROUTES).map(link => ({
-    href: ROUTES[link],
-    Icon: navLinksIconMap[link],
-    key: link,
-    label: i18n(`pages.links.${link}`)
+  const navLinks: NavLink[] = getObjectKeys(ROUTES).map(routeKey => ({
+    href: ROUTES[routeKey],
+    Icon: navLinksIconMap[routeKey],
+    key: routeKey,
+    label: i18n(`pages.${routeKey}.link-label`)
   }))
 
   const longestLabel = navLinks.reduce((longest, current) => {
     return current.label.length > longest.label.length ? current : longest
   }, navLinks[0]).label
 
-  const linkWidthInCh = longestLabel.length > MIN_LINK_WIDTH_VALUE_IN_CH
-    ? longestLabel.length
-    : MIN_LINK_WIDTH_VALUE_IN_CH
+  const linkWidthInCh = Math.max(longestLabel.length, MIN_LINK_WIDTH_VALUE_IN_CH)
 
   const linkStyle: Record<string, string> = {
     '--navbar-link-width': `${linkWidthInCh}ch`

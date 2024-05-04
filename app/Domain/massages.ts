@@ -4,7 +4,7 @@ import bedLandscape from '@/Assets/Images/bed-landscape.jpg'
 import bedPortrait from '@/Assets/Images/bed-portrait.jpg'
 import napKins from '@/Assets/Images/napkins.jpg'
 
-export const MASSAGES = [
+export const MASSAGES_KEY = [
   'lymphatic-drainage',
   'maderotherapy-body',
   'maderotherapy-body-and-face',
@@ -14,7 +14,11 @@ export const MASSAGES = [
   'zone-mixed-methods'
 ] as const
 
-export type Massage = typeof MASSAGES[number]
+export type MassageKey = typeof MASSAGES_KEY[number]
+
+export const isMassageKey = (key: string): key is MassageKey => {
+  return MASSAGES_KEY.includes(key as MassageKey)
+}
 
 export type Offer = {
   durationInMin: number
@@ -26,7 +30,7 @@ export type MassageInfo = {
   offers: Offer[]
 }
 
-export const massagesOffers: Record<Massage, MassageInfo> = {
+export const massagesOffers: Record<MassageKey, MassageInfo> = {
   'scalp': {
     image: bedLandscape,
     offers: [

@@ -1,9 +1,28 @@
+import { notFound } from 'next/navigation'
 import React from 'react'
 
-const MassagePage: React.FC = () => {
+import { PageTitle } from '@/Components/page-title'
+import { isMassageKey } from '@/Domain/massages'
+import type { PageProps } from '@/Routes/pages.types'
+
+type MassageDetails = {
+
+}
+
+const MassagePage: React.FC<PageProps> = async ({ params }) => {
+  const massageKey = params.slug
+
+  const isMassageKeyValid = isMassageKey(massageKey)
+
+  if (!isMassageKeyValid) {
+    notFound()
+  }
+
   return (
     <>
-      1 massage
+      <PageTitle pageKey={massageKey} />
+
+
     </>
   )
 }

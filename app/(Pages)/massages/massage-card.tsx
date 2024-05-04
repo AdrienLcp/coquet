@@ -1,14 +1,15 @@
 'use client'
 
+import Link from 'next/link'
 import React from 'react'
 
 import type { MassageDisplay } from '@/(Pages)/massages/massages-list'
 import { MassageOffersList } from '@/(Pages)/massages/massage-offers-list'
 import { Card } from '@/Components/card'
 import { Image } from '@/Components/image'
+import { getMassageHref } from '@/Routes'
 
 import './massage-card.styles.sass'
-import Link from 'next/link'
 
 type MassageCardProps = {
   massage: MassageDisplay
@@ -16,7 +17,7 @@ type MassageCardProps = {
 }
 
 export const MassageCard: React.FC<MassageCardProps> = ({ massage, isReversed }) => (
-  <Link href={massage.slug} className='massage-card__wrapper'>
+  <Link href={getMassageHref(massage.key)} className='massage-card__wrapper'>
     <Card
       isReversed={isReversed}
       className='massage-card'

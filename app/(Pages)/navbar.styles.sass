@@ -1,9 +1,12 @@
 @import '@/Styles/mixins'
 @import '@/Styles/typography'
+@import '@/Styles/animations'
 
 .navbar
   display: flex
   align-items: center
+  padding-bottom: var(--spacing-m)
+  filter: var(--drop-shadow)
 
   &__link
     @include label-medium
@@ -13,11 +16,11 @@
     padding-block: var(--spacing-m) var(--spacing-xxs)
     min-width: calc(var(--navbar-link-width, calc(var(--font-size-xxs) * 8)) + var(--spacing-m))
     border-radius: var(--radius-s)
+    color: hsl(var(--white))
     text-align: center
 
     &:hover
-      background-color: hsl(var(--neutral-background-primary-hover))
+      background-color: hsla(var(--black) / 0.4)
 
     &:active
-      background-color: hsl(var(--neutral-background-primary-pressed))
-
+      background-color: hsla(var(--black) / 0.6)

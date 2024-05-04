@@ -12,12 +12,12 @@ const NotFound: React.FC = () => {
   return (
     <div className='not-found'>
       <h2 className='not-found__title'>
-        {i18n('pages.notFound.title')}
+        {i18n('pages.not-found.title')}
       </h2>
 
       <Link href='/'>
         <Button>
-          {i18n('pages.notFound.goHome')}
+          {i18n('pages.not-found.go-home')}
         </Button>
       </Link>
     </div>
