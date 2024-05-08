@@ -31,7 +31,7 @@ const About: React.FC = async () => (
     <PageTitle pageKey='about' />
 
     <div>
-      <Image 
+      <Image
         src={photoMarie}
         alt='Marie Ploteau'
       />

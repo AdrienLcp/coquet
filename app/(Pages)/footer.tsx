@@ -1,12 +1,11 @@
-'use client'
+import React from 'react'
 
-import { useI18n } from '@/I18n'
+import { Socials } from '@/(Pages)/socials'
 
-export const Footer: React.FC = () => {
-  const { i18n } = useI18n()
+import './footer.styles.sass'
 
-  return (
-    <footer>
-    </footer>
-  )
-}
+export const Footer: React.FC = async () => (
+  <footer className='footer'>
+    <Socials />
+  </footer>
+)

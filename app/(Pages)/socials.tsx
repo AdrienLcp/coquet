@@ -12,37 +12,48 @@ type SocialNetwork = {
   key: string
   url: string
   Icon: IconElement
+  color: string
 }
 
 const socialsNetworks: SocialNetwork[] = [
   {
     key: 'Facebook',
     url: 'https://www.facebook.com/profile.php?id=61557566169594',
-    Icon: FacebookIcon
+    Icon: FacebookIcon,
+    color: '#3B5998'
   },
   {
     key: 'Instagram',
     url: 'https://www.instagram.com/lmc_le_moment_cocooning',
-    Icon: InstagramIcon
+    Icon: InstagramIcon,
+    color: '#C13584'
   },
   {
     key: 'TikTok',
     url: 'https://www.tiktok.com/@lmcmarie',
-    Icon: TikTokIcon
+    Icon: TikTokIcon,
+    color: '#EE1D52'
   }
 ]
 
 export const Socials: React.FC = () => (
   <ul className='socials'>
-    {socialsNetworks.map(({ key, url, Icon }) => (
-      <li key={key}>
-        <Link
-          href={url}
-          className='socials__link'
-        >
-          <Icon />
-        </Link>
-      </li>
-    ))}
+    {socialsNetworks.map(({ key, url, Icon, color }) => {
+      const linkStyle: Record<string, string> = {
+        '--social-link-color': color
+      }
+
+      return (
+        <li key={key}>
+          <Link
+            href={url}
+            className='socials__link'
+            style={linkStyle}
+          >
+            <Icon />
+          </Link>
+        </li>
+      )
+    })}
   </ul>
 )
