@@ -1,6 +1,6 @@
 'use client'
 
-import { BedSingleIcon, HomeIcon, type LucideIcon, UserIcon } from 'lucide-react'
+import { BedSingleIcon, type LucideIcon, UserIcon, AlbumIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -12,14 +12,16 @@ import './navbar.styles.sass'
 
 const MIN_LINK_WIDTH_VALUE_IN_CH = 10
 
-const navLinksIconMap: Record<RouteKey, LucideIcon> = {
-  home: HomeIcon,
-  massages: BedSingleIcon,
-  about: UserIcon
+type LinkKey = Exclude<RouteKey, 'home'>
+
+const navLinksIconMap: Record<LinkKey, LucideIcon> = {
+  about: UserIcon,
+  book: AlbumIcon,
+  massages: BedSingleIcon
 }
 
 type NavLink = {
-  key: RouteKey
+  key: LinkKey
   href: RouteHref
   label: string
   Icon: LucideIcon
@@ -28,11 +30,13 @@ type NavLink = {
 export const Navbar: React.FC = () => {
   const { i18n } = useI18n()
 
-  const navLinks: NavLink[] = getObjectKeys(ROUTES).map(routeKey => ({
-    href: ROUTES[routeKey],
-    Icon: navLinksIconMap[routeKey],
-    key: routeKey,
-    label: i18n(`pages.${routeKey}.link-label`)
+  const linkedRoutes: LinkKey[] = getObjectKeys(ROUTES).filter(routeKey => routeKey !== 'home') as LinkKey[]
+
+  const navLinks: NavLink[] = linkedRoutes.map(linkKey => ({
+    href: ROUTES[linkKey],
+    Icon: navLinksIconMap[linkKey],
+    key: linkKey,
+    label: i18n(`pages.${linkKey}.link-label`)
   }))
 
   const longestLabel = navLinks.reduce((longest, current) => {

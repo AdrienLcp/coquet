@@ -6,10 +6,53 @@
     "logo-alt": "Logo de Le Moment Coquet"
   },
   "domain": {
+    "book": {
+      "fields": {
+        "day": {
+          "description": "Choisissez une date",
+          "label": "Date",
+          "required": "Ce champs est requis"
+        },
+        "email-or-phone": {
+          "description": "Entrez votre adresse mail ou votre numéro de téléphone pour avoir la confirmation de votre réservation.",
+          "label": "Mail ou téléphone",
+          "placeholder": "jeanne-durand@gmail.com ou 06.05.04.03.01",
+          "required": "Ce champs est requis"
+        },
+        "massage": {
+          "description": "Choisissez un massage",
+          "label": "Massage",
+          "placeholder": "Choisissez un massage",
+          "required": "Ce champs est requis"
+        },
+        "hour": {
+          "description": "Choisissez une heure",
+          "label": "Heure",
+          "required": "Ce champs est requis"
+        },
+        "more": {
+          "label": "Informations supplémentaires",
+          "placeholder": "Vous pouvez ajouter des informations supplémentaires ici, ou me poser vos questions."
+        },
+        "name": {
+          "description": "Vous pouvez renseigner votre nom",
+          "label": "Nom",
+          "placeholder": "Jeanne Durand"
+        }
+      },
+      "message-sent": {
+        "title": "Demande de réservation envoyée",
+        "sub-text": "Vous recevrez un mail ou un SMS de confirmation dans les plus brefs délais."
+      }
+    },
     "massages": {
       "minutes": "minutes",
       "euros": "€",
       "lymphatic-drainage": {
+        "title": "Drainage lymphatique - Méthode brésilienne",
+        "description": ""
+      },
+      "maderotherapy-and-lymphatic-drainage": {
         "title": "Madérothérapie + Drainage lymphatique",
         "description": ""
       },
@@ -54,7 +97,11 @@
   "pages": {
     "about": {
       "title": "Marie Ploteau",
-      "link-label": "À propos de moi"
+      "link-label": "Moi"
+    },
+    "book": {
+      "title": "Réserver un massage",
+      "link-label": "Réserver"
     },
     "home": {
       "title": "Accueil",
@@ -62,7 +109,7 @@
     },
     "massages": {
       "title": "Mes offres de massages",
-      "link-label": "Liste des massages"
+      "link-label": "Massages"
     },
     "not-found": {
       "title": "La page que vous cherchez n'existe pas",

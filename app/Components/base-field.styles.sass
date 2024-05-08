@@ -1,0 +1,35 @@
+@import '@/Styles/typography'
+
+.base-field
+  display: flex
+  flex-direction: column
+
+  &__label
+    @include label-large
+
+  &__description
+    @include body-small
+    margin-top: var(--spacing-xxxs)
+
+  & textarea
+    min-height: 10ch
+    min-width: 10ch
+    max-width: var(--content-width)
+
+  & input,
+  & textarea
+    @include label-medium
+    border: var(--stroke-thick, 2px) solid hsl(var(--neutral-stroke-rest))
+    border-radius: var(--radius-xs, 4px)
+    background-color: transparent
+    padding: var(--spacing-xs, 4px) var(--spacing-s, 8px)
+
+    &::placeholder
+      color: hsl(var(--neutral-foreground-muted))
+
+    &:hover
+      border-color: hsl(var(--neutral-stroke-hover))
+
+    &:focus
+      border-color: hsl(var(--neutral-stroke-selected))
+      outline: hsl(var(--neutral-stroke-selected))

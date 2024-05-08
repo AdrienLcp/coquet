@@ -6,10 +6,53 @@
     "logo-alt": "El Moment Coquet logo"
   },
   "domain": {
+    "book": {
+      "fields": {
+        "day": {
+          "description": "",
+          "label": "",
+          "required": ""
+        },
+        "email-or-phone": {
+          "description": "",
+          "label": "",
+          "placeholder": "",
+          "required": ""
+        },
+        "hour": {
+          "description": "",
+          "label": "",
+          "required": ""
+        },
+        "massage": {
+          "description": "",
+          "label": "",
+          "placeholder": "",
+          "required": ""
+        },
+        "more": {
+          "label": "",
+          "placeholder": ""
+        },
+        "name": {
+          "description": "",
+          "label": "",
+          "placeholder": ""
+        }
+      },
+      "message-sent": {
+        "title": "",
+        "sub-text": ""
+      }
+    },
     "massages": {
       "minutes": "",
       "euros": "€",
       "lymphatic-drainage": {
+        "title": "",
+        "description": ""
+      },
+      "maderotherapy-and-lymphatic-drainage": {
         "title": "",
         "description": ""
       },
@@ -54,7 +97,11 @@
   "pages": {
     "about": {
       "title": "Marie Ploteau",
-      "link-label": "Acerca de mí"
+      "link-label": "Mí"
+    },
+    "book": {
+      "title": "Reservar un masaje",
+      "link-label": "Reservar"
     },
     "home": {
       "title": "Inicio",

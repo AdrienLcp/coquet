@@ -17,6 +17,8 @@ export const HeaderBackground: React.FC = () => {
       src={massageBed}
       alt={i18n('layouts.header.background-alt')}
       className='header-background'
+      loading={undefined}
+      priority
     />
   )
 }

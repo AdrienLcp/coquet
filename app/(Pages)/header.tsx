@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 import { HeaderBackground } from '@/(Pages)/header-background'
@@ -5,6 +6,7 @@ import { Navbar } from '@/(Pages)/navbar'
 import { LogoTitle } from '@/Components/logo'
 import { Motion } from '@/Components/motion'
 import { LocaleSwitcher } from '@/I18n/locale-switcher'
+import { ROUTES } from '@/Routes'
 import { ThemeSwitcher } from '@/Theme/theme-switcher'
 
 import './header.styles.sass'
@@ -14,7 +16,9 @@ export const Header: React.FC = async () => (
     <HeaderBackground />
 
     <Motion animation='scale' className='header__logo'>
-      <LogoTitle direction='column' />
+      <Link href={ROUTES.home}>
+        <LogoTitle direction='column' />
+      </Link>
     </Motion>
 
     <Motion animation='fade-in'>

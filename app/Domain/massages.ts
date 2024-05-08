@@ -6,6 +6,7 @@ import napKins from '@/Assets/Images/napkins.jpg'
 
 export const MASSAGES_KEY = [
   'lymphatic-drainage',
+  'maderotherapy-and-lymphatic-drainage',
   'maderotherapy-body',
   'maderotherapy-body-and-face',
   'maderotherapy-face',
@@ -28,10 +29,12 @@ export type Offer = {
 export type MassageInfo = {
   image: StaticImageData
   offers: Offer[]
+  order: number
 }
 
 export const massagesOffers: Record<MassageKey, MassageInfo> = {
   'scalp': {
+    order: 1,
     image: bedLandscape,
     offers: [
       {
@@ -40,7 +43,18 @@ export const massagesOffers: Record<MassageKey, MassageInfo> = {
       }
     ]
   },
+  'lymphatic-drainage': {
+    order: 2,
+    image: bedLandscape,
+    offers: [
+      {
+        durationInMin: 75,
+        priceInEuros: 110
+      }
+    ]
+  },
   'maderotherapy-body': {
+    order: 3,
     image: bedPortrait,
     offers: [
       {
@@ -58,6 +72,7 @@ export const massagesOffers: Record<MassageKey, MassageInfo> = {
     ],
   },
   'zone': {
+    order: 4,
     image: napKins,
     offers: [
       {
@@ -67,6 +82,7 @@ export const massagesOffers: Record<MassageKey, MassageInfo> = {
     ],
   },
   'zone-mixed-methods': {
+    order: 5,
     image: bedLandscape,
     offers: [
       {
@@ -76,6 +92,7 @@ export const massagesOffers: Record<MassageKey, MassageInfo> = {
     ],
   },
   'maderotherapy-face': {
+    order: 6,
     image: bedPortrait,
     offers: [
       {
@@ -85,6 +102,7 @@ export const massagesOffers: Record<MassageKey, MassageInfo> = {
     ],
   },
   'maderotherapy-body-and-face': {
+    order: 7,
     image: napKins,
     offers: [
       {
@@ -93,13 +111,14 @@ export const massagesOffers: Record<MassageKey, MassageInfo> = {
       }
     ],
   },
-  'lymphatic-drainage': {
+  'maderotherapy-and-lymphatic-drainage': {
+    order: 8,
     image: bedLandscape,
     offers: [
       {
         durationInMin: 120,
         priceInEuros: 170
       }
-    ]
+    ],
   }
 }

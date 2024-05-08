@@ -6,10 +6,53 @@
     "logo-alt": "Le Moment Coquet logo"
   },
   "domain": {
+    "book": {
+      "fields": {
+        "day": {
+          "description": "Choose a date",
+          "label": "Date",
+          "required": "This field is required"
+        },
+        "email-or-phone": {
+          "description": "Give me your email or phone number and I will contact you to confirm the appointment.",
+          "label": "Email or phone",
+          "placeholder": "jane-doe@gmail.com or +33 6 12 34 56 78",
+          "required": "This field is required"
+        },
+        "hour": {
+          "description": "Choose an hour",
+          "label": "Hour",
+          "required": "This field is required"
+        },
+        "massage": {
+          "description": "",
+          "label": "Massage",
+          "placeholder": "Choose a massage",
+          "required": "This field is required"
+        },
+        "more": {
+          "label": "More information",
+          "placeholder": "You can ask me any question or specify any detail here"
+        },
+        "name": {
+          "description": "You can give me your name",
+          "label": "Name",
+          "placeholder": "Jane Doe"
+        }
+      },
+      "message-sent": {
+        "title": "Book request sent",
+        "sub-text": "You will receive a confirmation email or SMS shortly."
+      }
+    },
     "massages": {
       "minutes": "",
       "euros": "€",
       "lymphatic-drainage": {
+        "title": "",
+        "description": ""
+      },
+      "maderotherapy-and-lymphatic-drainage": {
         "title": "",
         "description": ""
       },
@@ -54,7 +97,11 @@
   "pages": {
     "about": {
       "title": "Marie Ploteau",
-      "link-label": "About me"
+      "link-label": "Me"
+    },
+    "book": {
+      "title": "Book a massage",
+      "link-label": "Book"
     },
     "home": {
       "title": "Home page",
