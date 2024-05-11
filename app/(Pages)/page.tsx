@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { PageTitle } from '@/Components/page-title'
+import { Intro } from '@/(Pages)/intro'
+import { About } from '@/(Pages)/about'
+import { Separator } from '@/Components/separator'
 
-const HomePage: React.FC = async () => (
+const HomePage: React.FC = () => (
   <>
-    <PageTitle pageKey='home' />
+    <Intro />
+
+    <Separator />
+
+    <About />
   </>
 )
 

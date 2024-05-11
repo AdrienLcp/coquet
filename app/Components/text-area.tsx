@@ -11,6 +11,9 @@ type TextAreaProps = BaseFieldProps & {
 
 export const TextArea: React.FC<TextAreaProps> = ({ placeholder, ...props }) => (
   <BaseField {...props}>
-    <ReactAriaTextArea placeholder={placeholder} />
+    <ReactAriaTextArea
+      className='text-area'
+      placeholder={placeholder}
+    />
   </BaseField>
 )

@@ -1,0 +1,24 @@
+@import '@/Styles/typography'
+
+:root
+  --input-padding-inline: var(--spacing-s, 8px)
+  --input-padding-block: var(--spacing-xs, 4px)
+  --input-stroke: var(--stroke-thick, 2px)
+  --input-radius: var(--radius-xs, 4px)
+
+@mixin common-input
+  @include label-medium
+  border: var(--input-stroke, 2px) solid hsl(var(--neutral-stroke-rest))
+  border-radius: var(--input-radius, 4px)
+  background-color: transparent
+  padding: var(--input-padding-block, 4px) var(--input-padding-inline, 8px)
+
+  &::placeholder
+    color: hsl(var(--neutral-foreground-muted))
+
+  &:hover
+    border-color: hsl(var(--neutral-stroke-hover))
+
+  &:focus
+    border-color: hsl(var(--neutral-stroke-selected))
+    outline: hsl(var(--neutral-stroke-selected))

@@ -3,7 +3,7 @@ import { Input } from 'react-aria-components'
 
 import { BaseField, type BaseFieldProps } from '@/Components/base-field'
 
-import './text-area.styles.sass'
+import './text-field.styles.sass'
 
 type TextFieldProps = BaseFieldProps & {
   placeholder?: string
@@ -11,6 +11,9 @@ type TextFieldProps = BaseFieldProps & {
 
 export const TextField: React.FC<TextFieldProps> = ({ placeholder, ...props }) => (
   <BaseField {...props}>
-    <Input placeholder={placeholder} />
+    <Input
+      className='text-field'
+      placeholder={placeholder}
+    />
   </BaseField>
 )

@@ -1,0 +1,30 @@
+@import '@/Styles/typography'
+
+.option
+  @include label-large
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: var(--spacing-xxl)
+  padding: var(--spacing-m) var(--spacing-xl)
+  min-width: 150px
+  cursor: pointer
+
+  &__box
+    display: flex
+    align-items: center
+    gap: var(--spacing-m)
+
+  &:hover
+    background-color: hsl(var(--neutral-background-secondary-hover))
+
+  &:active
+    background-color: hsl(var(--neutral-background-secondary-pressed))
+
+  &.selected
+    background-color: hsl(var(--neutral-background-secondary-selected))
+    color: hsl(var(--brand-foreground-primary-rest))
+
+  &.disabled
+    pointer-events: none
+    color: hsl(var(--neutral-foreground-disabled))

@@ -7,6 +7,7 @@
   },
   "domain": {
     "book": {
+      "page-title": "Book a massage",
       "fields": {
         "day": {
           "description": "Choose a date",
@@ -92,24 +93,6 @@
   "layouts": {
     "header": {
       "background-alt": "Massage table"
-    }
-  },
-  "pages": {
-    "about": {
-      "title": "Marie Ploteau",
-      "link-label": "Me"
-    },
-    "book": {
-      "title": "Book a massage",
-      "link-label": "Book"
-    },
-    "home": {
-      "title": "Home page",
-      "link-label": "Home"
-    },
-    "massages": {
-      "title": "Massages",
-      "link-label": "Massages"
     },
     "not-found": {
       "title": "Page not found",

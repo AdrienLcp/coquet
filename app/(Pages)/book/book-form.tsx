@@ -10,6 +10,9 @@ import { TextField } from '@/Components/text-field'
 import { useI18n } from '@/I18n'
 
 import './book-form.styles.sass'
+import { Option } from '@/Components/option'
+import { MassageKey } from '@/Domain/massages'
+import { ComboBox } from '@/Components/combo-box'
 
 type BookFormProps = {
   formSpreeKey: string
@@ -45,6 +48,49 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
     const message = test.message
   }
 
+  const massagesOptions: Array<Option<MassageKey>> = [
+    {
+      key: 'lymphatic-drainage',
+      label: 'Lymphatic Drainage',
+      onClick: () => console.log('Lymphatic Drainage')
+    },
+    {
+      key: 'maderotherapy-and-lymphatic-drainage',
+      label: 'Maderotherapy and Lymphatic Drainage',
+      onClick: () => console.log('Maderotherapy and Lymphatic Drainage')
+    },
+    {
+      key: 'maderotherapy-body',
+      label: 'maderotherapy-body',
+      onClick: () => console.log('maderotherapy-body')
+    },
+    {
+      key: 'maderotherapy-body-and-face',
+      label: 'Maderotherapy Body and Face',
+      onClick: () => console.log('Maderotherapy Body and Face')
+    },
+    {
+      key: 'maderotherapy-face',
+      label: 'Maderotherapy Face',
+      onClick: () => console.log('Maderotherapy Face')
+    },
+    {
+      key: 'scalp',
+      label: 'Scalp',
+      onClick: () => console.log('Scalp')
+    },
+    {
+      key: 'zone',
+      label: 'Zone',
+      onClick: () => console.log('Zone')
+    },
+    {
+      key: 'zone-mixed-methods',
+      label: 'Zone Mixed Methods',
+      onClick: () => console.log('Zone Mixed Methods')
+    }
+  ]
+
   return (
     <Form
       onSubmit={handleSubmit}
@@ -66,6 +112,8 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
           placeholder={i18n('domain.book.fields.email-or-phone.placeholder')}
           description={i18n('domain.book.fields.email-or-phone.description')}
         />
+
+        <ComboBox options={massagesOptions} label='Massage' />
 
         {/* Add Massage Select */}
 

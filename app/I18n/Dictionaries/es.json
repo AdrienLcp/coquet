@@ -7,6 +7,7 @@
   },
   "domain": {
     "book": {
+      "page-title": "Reservar un masaje",
       "fields": {
         "day": {
           "description": "",
@@ -92,24 +93,6 @@
   "layouts": {
     "header": {
       "background-alt": "Mesa de masajes"
-    }
-  },
-  "pages": {
-    "about": {
-      "title": "Marie Ploteau",
-      "link-label": "Mí"
-    },
-    "book": {
-      "title": "Reservar un masaje",
-      "link-label": "Reservar"
-    },
-    "home": {
-      "title": "Inicio",
-      "link-label": "Inicio"
-    },
-    "massages": {
-      "title": "",
-      "link-label": "Masajes"
     },
     "not-found": {
       "title": "Página no encontrada",

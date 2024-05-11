@@ -8,6 +8,9 @@ import { Dropdown, type Option } from '@/Components/dropdown'
 import { useI18n } from '@/I18n'
 import { type Theme, THEMES, useTheme } from '@/Theme'
 
+const DROPDOWN_ICON_SIZE = 15
+const OPTION_ICON_SIZE = 20
+
 type ThemeInfos = {
   label: Option<Theme>['label']
   Icon: Option<Theme>['Icon']
@@ -20,15 +23,15 @@ export const ThemeSwitcher: React.FC = () => {
   const themesMap: Record<Theme, ThemeInfos> = {
     System: {
       label: i18n('features.theme.system'),
-      Icon: <ScreenShareIcon size={20} />
+      Icon: <ScreenShareIcon size={OPTION_ICON_SIZE} />
     },
     Light: {
       label: i18n('features.theme.light'),
-      Icon: <SunIcon size={20} />
+      Icon: <SunIcon size={OPTION_ICON_SIZE} />
     },
     Dark: {
       label: i18n('features.theme.dark'),
-      Icon: <MoonIcon size={20} />
+      Icon: <MoonIcon size={OPTION_ICON_SIZE} />
     }
   }
 
@@ -44,8 +47,8 @@ export const ThemeSwitcher: React.FC = () => {
     <Dropdown options={themeOptions}>
       <Button size='icon'>
         {isDarkModeActive
-          ? <MoonIcon size={15} />
-          : <SunIcon size={15} />
+          ? <MoonIcon size={DROPDOWN_ICON_SIZE} />
+          : <SunIcon size={DROPDOWN_ICON_SIZE} />
         }        
       </Button>
     </Dropdown>

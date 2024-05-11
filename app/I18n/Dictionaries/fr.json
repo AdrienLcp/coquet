@@ -7,6 +7,7 @@
   },
   "domain": {
     "book": {
+      "page-title": "Réserver un massage",
       "fields": {
         "day": {
           "description": "Choisissez une date",
@@ -90,26 +91,44 @@
     }
   },
   "layouts": {
+    "about": {
+      "images-alt": {
+        "marie": "Marie",
+        "bed": "Lit de massage"
+      },
+      "paragraphs": {
+        "1": "Moi, c'est Marie, j'ai 35 ans, et j'ai toujours été intéressée par le monde du bien-être et de la beauté.",
+        "2": "Au-delà d'une simple passion, j'en ai fait mon métier. En commençant d'abord par la coiffure à 17 ans, j'ai d'ailleurs tenu mon propre salon en Andorre quelques années. J'avais aussi une collègue esthéticienne.",
+        "3": "Je me suis ensuite lancée à la coiffure à domicile, puis pour des événements",
+        "4": "Mes 18 ans d'expérience dans ce monde m'ont permis d'écouter et de ressentir ce qui rendait la vie difficile à mes clients",
+        "5": "De quoi ils avaient besoin pour être plus heureux dans leur corps. Plus libres.",
+        "6": "Et comme j'aime me former et toujours en apprendre plus sur le bien-être et la santé, je me suis certifiée et professionnalisée sur différentes techniques de massages NATURELLES",
+        "7": "Des massages qui peuvent améliorer la santé physique (et mentale) de chacun !",
+        "8": "Je me déplace chez vous avec mon matériel (30 km aux alentours d'Ancenis 44 / 49), afin de vous offrir ces pratiques, qui vous donneront des résultats... Même en",
+        "bold": "une seule séance !"
+      }
+    },
     "header": {
       "background-alt": "Table de massage"
-    }
-  },
-  "pages": {
-    "about": {
-      "title": "Marie Ploteau",
-      "link-label": "Moi"
     },
-    "book": {
-      "title": "Réserver un massage",
-      "link-label": "Réserver"
-    },
-    "home": {
-      "title": "Accueil",
-      "link-label": "Accueil"
-    },
-    "massages": {
-      "title": "Mes offres de massages",
-      "link-label": "Massages"
+    "intro": {
+      "benefits": {
+        "1": "En quelques séances, sans bouger de chez toi",
+        "2": "Sans faire de régime et son yo-yo inévitable",
+        "3": "Pour retrouver confiance en toi et sourire devant ton miroir",
+        "4": "Et bien d'autres bienfaits (que je t'explique plus bas) 😋"
+      },
+      "catch-phrases": {
+        "1": "Tu en as marre de ne pas réussir à perdre quelques kilos, malgré des tonnes de régime et une activité physique ?",
+        "2": "Te débarrasser de ta culotte de cheval est une épreuve impossible ?",
+        "3": "Ou encore, tu te sens épuisée sur ton canapé à regarder ta série, pourtant tu n'as presque rien fait aujourd'hui ?",
+        "4": "Ta confiance en toi en a pris un coup alors que tu as presque tout essayé ?",
+        "5": "Je te présente les solutions à ces problèmes qui te gâchent la vie sans arrêt..."
+      },
+      "footer": "Mais avant de t'expliquer ce charabia, laisse-moi me présenter un peu !",
+      "super-title": "Pour les femmes qui veulent vraiment retrouver une forme physique et tonique...",
+      "title": "Découvre comment affiner et tonifier ta silhouette, de manière durable et de façon 100% naturelle",
+      "to-home": "(à domicile)"
     },
     "not-found": {
       "title": "La page que vous cherchez n'existe pas",

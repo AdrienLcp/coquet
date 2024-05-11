@@ -1,13 +1,19 @@
-import { CheckIcon } from 'lucide-react'
 import React from 'react'
-import { type Key, Menu, MenuItem, MenuTrigger, Popover } from 'react-aria-components'
+import {
+  type Key,
+  Menu,
+  type MenuProps,
+  MenuItem,
+  MenuTrigger,
+  Popover
+} from 'react-aria-components'
 
+import { OptionItem } from '@/Components/option'
 import { Motion } from '@/Components/motion'
-import { classNames } from '@/Helpers/styles'
 
 import './dropdown.styles.sass'
 
-export type Option <T> = {
+export type Option <T extends Key> = {
   key: T
   label: string
   Icon?: React.ReactNode
@@ -16,13 +22,11 @@ export type Option <T> = {
   onClick?: (option: Option<T>) => void
 }
 
-type DropdownProps <T> = React.PropsWithChildren<{
+type DropdownProps <T extends Key> = MenuProps<T> & React.PropsWithChildren<{
   options: Array<Option<T>>
 }>
 
-export function Dropdown <T extends string> ({ children, options }: DropdownProps<T>) {
-  const [isDropdownOpen, setIsDropdownOpen] = React.useState<boolean>(false)
-
+export function Dropdown <T extends Key> ({ children, options }: DropdownProps<T>) {
   const handleClickOption = (key: Key) => {
     const clickedOption = options.find(option => option.key === key)
 
@@ -35,7 +39,7 @@ export function Dropdown <T extends string> ({ children, options }: DropdownProp
     <MenuTrigger>
       {children}
 
-      <Popover offset={5} onOpenChange={setIsDropdownOpen}>
+      <Popover offset={5}>
         <Motion animation='accordion'>
           <Menu
             selectedKeys={options.filter(option => Boolean(option.isSelected)).map(option => option.key)}
@@ -44,21 +48,17 @@ export function Dropdown <T extends string> ({ children, options }: DropdownProp
           >
             {options.map(option => (
               <MenuItem
-                key={option.key}
+                className='dropdown__menu__item'
                 id={option.key}
-                className={classNames(
-                  'dropdown__menu__option',
-                  Boolean(option.isSelected) && 'selected',
-                  Boolean(option.isDisabled) && 'disabled'
-                )}
+                key={option.key}
               >
-                <div className='dropdown__menu__option__box'>
-                  {option.Icon !== undefined && option.Icon}
-
-                  {option.label}
-                </div>
-
-                {Boolean(option.isSelected) && <CheckIcon size={20} />}
+                <OptionItem
+                  Icon={option.Icon}
+                  key={option.key}
+                  isDisabled={option.isDisabled}
+                  isSelected={option.isSelected}
+                  label={option.label}
+                />
               </MenuItem>
             ))}
           </Menu>
