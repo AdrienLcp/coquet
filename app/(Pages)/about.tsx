@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { Image } from '@/Components/image'
+import { Section } from '@/Components/section'
 import { useI18n } from '@/I18n'
 
 import bed from '@/Assets/Images/bed-landscape.jpg'
@@ -24,7 +25,7 @@ export const About: React.FC = () => {
   ]
 
   return (
-    <section className='about'>
+    <Section className='about'>
       <Image
         src={marie}
         alt={i18n('layouts.about.images-alt.marie')}
@@ -48,6 +49,6 @@ export const About: React.FC = () => {
         src={bed}
         alt={i18n('layouts.about.images-alt.bed')}
       />
-    </section>
+    </Section>
   )
 }

@@ -1,5 +1,23 @@
 @import '@/Styles/typography'
 
-.page-title
-  @include title-large
+.title
   margin-inline: auto
+  text-align: center
+
+  &.h1
+    @include display-large
+
+  &.h2
+    @include display-small
+
+  &.h3
+    @include headline-medium
+
+  &.h4
+    @include title-large
+
+  &.h5
+    @include title-medium
+
+  &.h6
+    @include title-small

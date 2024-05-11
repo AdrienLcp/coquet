@@ -1,16 +1,26 @@
 import React from 'react'
 
-import { Intro } from '@/(Pages)/intro'
 import { About } from '@/(Pages)/about'
+import { Intro } from '@/(Pages)/intro'
+import { Massages } from '@/Features/Massages/massages'
+import { Opinions } from '@/(Pages)/opinions'
 import { Separator } from '@/Components/separator'
 
-const HomePage: React.FC = () => (
+const HomePage: React.FC = async () => (
   <>
     <Intro />
 
     <Separator />
 
     <About />
+
+    <Separator />
+
+    <Massages />
+
+    <Separator />
+
+    <Opinions />
   </>
 )
 

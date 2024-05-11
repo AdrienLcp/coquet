@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+import { Section } from '@/Components/section'
 import { Title } from '@/Components/title'
 import { useI18n } from '@/I18n'
 
@@ -26,15 +27,19 @@ export const Intro: React.FC = () => {
   ]
 
   return (
-    <section className='intro'>
+    <div className='intro'>
       <Title tag='h2'>
         {i18n('layouts.intro.super-title')}
       </Title>
 
-      <div className='intro__box'>
+      <Section className='intro__box'>
         <Title tag='h3'>
-          <span className='intro__box__title'>
-            {i18n('layouts.intro.title')}
+          {i18n('layouts.intro.title')}
+
+          {' '}
+
+          <span className='intro__box__sub-title'>
+            {i18n('layouts.intro.to-home')}
           </span>
         </Title>
 
@@ -45,17 +50,17 @@ export const Intro: React.FC = () => {
             </li>
           ))}
         </ul>
-      </div>
 
-      {catchPhrases.map((phrase, index) => (
-        <p key={index}>
-          {phrase}
-        </p>
-      ))}
+        {catchPhrases.map((phrase, index) => (
+          <p key={index}>
+            {phrase}
+          </p>
+        ))}
 
-      <span>
-        {i18n('layouts.intro.footer')}
-      </span>
-    </section>
+        <span>
+          {i18n('layouts.intro.footer')}
+        </span>
+      </Section>
+    </div>
   )
 }

@@ -155,6 +155,12 @@ input {
 
 /* personnal add */
 
+*,
+*::before,
+*::after {
+  text-wrap: pretty;
+}
+
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }

@@ -108,6 +108,16 @@
         "bold": "une seule séance !"
       }
     },
+    "footer": {
+      "terms-of-sale": {
+        "title": "CGV :",
+        "paragraphs": {
+          "1": "En conformité et au regard de  la loi du 30 avril 1946, du décret n°60645 du 4 juillet 1960, à l'article L489 du code de santé public et au décret n°96879 du 8 octobre 1996, toutes prestations et massage bien être liés proposés sur ce site n'est associé à aucune technique de kinésithérapie, et ne s'apparente en rien à des techniques médicales quelles qu'elles soient ni de près ni de loin, mais bien à des techniques de relaxation et de bien-être, même si elles peuvent aider le corps à activer ses facultés d'auto-guérissons.",
+          "2": "Ces techniques ne sont  aucunement liées à des pratiques sexuelles.",
+          "3": "Conformément aux articles L.616-1 et R.616-1 du code de la consommation, je propose un dispositif de médiation de la consommation. L'entité de médiation retenue est : CNPM - MEDIATION DE LA CONSOMMATION. En cas de litige, vous pouvez déposer votre réclamation sur son site : https://cnpm-mediation-consommation.eu ou par voie postale en écrivant à CNPM - MEDIATION - CONSOMMATION - 27 avenue de la libération - 42400 Saint-Chamond"
+        }
+      }
+    },
     "header": {
       "background-alt": "Table de massage"
     },
@@ -133,6 +143,10 @@
     "not-found": {
       "title": "La page que vous cherchez n'existe pas",
       "go-home": "Revenir à l'accueil"
+    },
+    "opinions": {
+      "they-trusted-me": "Elles m'ont fait confiance",
+      "image-alt": "Avis de mes clientes"
     }
   }
 }

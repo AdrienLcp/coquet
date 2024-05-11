@@ -19,7 +19,7 @@ export const Title: React.FC<TitleProps> = ({
   const Tag = tag
 
   return (
-    <Tag {...props} className={classNames('title', className)}>
+    <Tag {...props} className={classNames('title', tag, className)}>
       {children}
     </Tag>
   )
