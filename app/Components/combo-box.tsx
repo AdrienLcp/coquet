@@ -4,7 +4,7 @@ import { Input, Key, ListBox, ListBoxItem, Popover, ComboBox as ReactAriaComboBo
 import { ChevronIcon } from '@/Components/chevron-icon'
 import { Label } from '@/Components/label'
 import { Motion } from '@/Components/motion'
-import { OptionItem } from '@/Components/option'
+import { type Option, OptionItem } from '@/Components/option'
 import { Pressable } from '@/Components/pressable'
 import { MENU_MIN_WIDTH } from '@/Config/constants'
 import type { BaseSelectProps } from '@/Types/inputs'
@@ -21,7 +21,7 @@ export function ComboBox <T extends Key> ({
 }: ComboBoxProps<T>) {
   const [isComboBoxMenuOpen, setIsComboBoxMenuOpen] = React.useState<boolean>(false)
   const [menuMinWidth, setMenuMinWidth] = React.useState<number>(MENU_MIN_WIDTH)
-  const [selectedKey, setSelectedKey] = React.useState<Key | null>(null)
+  const [selectedOption, setSelectedOption] = React.useState<Option<T> | null>(null)
 
   const comboBoxRef = React.useRef<HTMLDivElement>(null)
 
@@ -31,17 +31,17 @@ export function ComboBox <T extends Key> ({
     }
   }, [comboBoxRef])
 
-  const handleSelectionChange = (key: Key) => {
-    const selectedOption = options.find(option => option.key === key)
+  const handleSelectionChange = (key: Key | null) => {
+    const currentOption = options.find(option => option.key === key)
 
-    if (selectedOption === undefined) {
+    if (currentOption === undefined) {
       return 
     }
 
-    setSelectedKey(key)
+    setSelectedOption(currentOption)
 
-    if (selectedOption.onClick !== undefined) {
-      selectedOption.onClick(selectedOption)
+    if (currentOption.onClick !== undefined) {
+      currentOption.onClick(currentOption)
     }
   }
 
@@ -84,7 +84,7 @@ export function ComboBox <T extends Key> ({
                   key={option.key}
                   Icon={option.Icon}
                   isDisabled={option.isDisabled}
-                  isSelected={option.key === selectedKey}
+                  isSelected={option.key === selectedOption?.key}
                   label={option.label}
                 />
               </ListBoxItem>
