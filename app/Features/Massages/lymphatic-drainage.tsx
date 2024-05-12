@@ -38,7 +38,7 @@ export const LymphaticDrainage: React.FC = () => {
       <p>
         {i18n('domain.massages.lymphatic-drainage.the')}
         {' '}
-        <b>{i18n('domain.massages.lymphatic-drainage.label')}</b>
+        <b>{i18n('domain.massages.lymphatic-drainage.name')}</b>
         {' '}
         {i18n('domain.massages.lymphatic-drainage.description')}
         {' '}

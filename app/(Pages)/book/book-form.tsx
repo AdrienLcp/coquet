@@ -3,26 +3,22 @@
 import { useForm } from '@formspree/react'
 import React from 'react'
 
+import { MessageSent } from '@/(Pages)/book/message-sent'
 import { Button } from '@/Components/button'
+import { ComboBox } from '@/Components/combo-box'
 import { Form } from '@/Components/form'
+import { Option } from '@/Components/option'
 import { TextArea } from '@/Components/text-area'
 import { TextField } from '@/Components/text-field'
+import { MassageKey } from '@/Domain/massages'
 import { useI18n } from '@/I18n'
 
 import './book-form.styles.sass'
-import { Option } from '@/Components/option'
-import { MassageKey } from '@/Domain/massages'
-import { ComboBox } from '@/Components/combo-box'
+import { Select } from '@/Components/select'
 
 type BookFormProps = {
   formSpreeKey: string
 }
-
-const MessageSent: React.FC = () => (
-  <div className='book-form__message-sent'>
-    <p>Message sent!</p>
-  </div>
-)
 
 type FieldValues = {
   contact: string
@@ -40,54 +36,18 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
     return <MessageSent />
   }
 
-  if (state.errors !== null) {
-    const formErrors = state.errors.getFormErrors()
-    const errors = state.errors.getAllFieldErrors()
-
-    const test = formErrors[0]
-    const message = test.message
-  }
-
   const massagesOptions: Array<Option<MassageKey>> = [
     {
+      key: 'madero-therapy',
+      label: i18n('domain.massages.madero-therapy.label')
+    },
+    {
       key: 'lymphatic-drainage',
-      label: 'Lymphatic Drainage',
-      onClick: () => console.log('Lymphatic Drainage')
-    },
-    {
-      key: 'maderotherapy-and-lymphatic-drainage',
-      label: 'Maderotherapy and Lymphatic Drainage',
-      onClick: () => console.log('Maderotherapy and Lymphatic Drainage')
-    },
-    {
-      key: 'maderotherapy-body',
-      label: 'maderotherapy-body',
-      onClick: () => console.log('maderotherapy-body')
-    },
-    {
-      key: 'maderotherapy-body-and-face',
-      label: 'Maderotherapy Body and Face',
-      onClick: () => console.log('Maderotherapy Body and Face')
-    },
-    {
-      key: 'maderotherapy-face',
-      label: 'Maderotherapy Face',
-      onClick: () => console.log('Maderotherapy Face')
+      label: i18n('domain.massages.lymphatic-drainage.label')
     },
     {
       key: 'scalp',
-      label: 'Scalp',
-      onClick: () => console.log('Scalp')
-    },
-    {
-      key: 'zone',
-      label: 'Zone',
-      onClick: () => console.log('Zone')
-    },
-    {
-      key: 'zone-mixed-methods',
-      label: 'Zone Mixed Methods',
-      onClick: () => console.log('Zone Mixed Methods')
+      label: i18n('domain.massages.scalp.label')
     }
   ]
 
@@ -102,18 +62,30 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
           name='Nom'
           label={i18n('domain.book.fields.name.label')}
           placeholder={i18n('domain.book.fields.name.placeholder')}
+          isRequired
         />
-
-{/* add descriptions in textField ? */}
 
         <TextField
           name='Contact'
           label={i18n('domain.book.fields.email-or-phone.label')}
           placeholder={i18n('domain.book.fields.email-or-phone.placeholder')}
           description={i18n('domain.book.fields.email-or-phone.description')}
+          isRequired
         />
 
-        <ComboBox options={massagesOptions} label='Massage' />
+        <ComboBox
+          label='Massage'
+          options={massagesOptions}
+          placeholder='Select a massage'
+          isRequired
+        />
+
+        <Select
+          label='Massage 2'
+          options={massagesOptions}
+          placeholder='Select a massage'
+          isRequired
+        />
 
         {/* Add Massage Select */}
 
@@ -131,7 +103,7 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
         type='submit'
         className='book-form__submit-button'
       >
-        Send
+        {i18n('domain.book.send')}
       </Button>
     </Form>
   )

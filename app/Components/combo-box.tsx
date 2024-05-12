@@ -1,24 +1,26 @@
-import { ChevronDown } from 'lucide-react'
 import React from 'react'
-import { Input, Key, Label, ListBox, ListBoxItem, Popover, ComboBox as ReactAriaComboBox } from 'react-aria-components'
+import { Input, Key, ListBox, ListBoxItem, Popover, ComboBox as ReactAriaComboBox } from 'react-aria-components'
 
-import { OptionItem, type Option } from '@/Components/option'
+import { ChevronIcon } from '@/Components/chevron-icon'
+import { Label } from '@/Components/label'
+import { Motion } from '@/Components/motion'
+import { OptionItem } from '@/Components/option'
 import { Pressable } from '@/Components/pressable'
-import { classNames } from '@/Helpers/styles'
+import { MENU_MIN_WIDTH } from '@/Config/constants'
+import type { BaseSelectProps } from '@/Types/inputs'
 
 import './combo-box.styles.sass'
 
-type ComboBoxProps <T extends Key> = {
-  label?: string
-  options: Array<Option<T>>
-}
+type ComboBoxProps <T extends Key> = BaseSelectProps<T>
 
 export function ComboBox <T extends Key> ({
   label,
-  options
+  options,
+  placeholder,
+  ...props
 }: ComboBoxProps<T>) {
-  const [isComboBoxOpen, setIsComboBoxOpen] = React.useState<boolean>(false)
-  const [menuMinWidth, setMenuMinWidth] = React.useState<number>(200)
+  const [isComboBoxMenuOpen, setIsComboBoxMenuOpen] = React.useState<boolean>(false)
+  const [menuMinWidth, setMenuMinWidth] = React.useState<number>(MENU_MIN_WIDTH)
   const [selectedKey, setSelectedKey] = React.useState<Key | null>(null)
 
   const comboBoxRef = React.useRef<HTMLDivElement>(null)
@@ -45,53 +47,50 @@ export function ComboBox <T extends Key> ({
 
   return (
     <ReactAriaComboBox
+      {...props}
       className='combo-box'
-      onOpenChange={setIsComboBoxOpen}
+      onOpenChange={setIsComboBoxMenuOpen}
       onSelectionChange={handleSelectionChange}
     >
-      {label !== undefined && (
-        <Label>
-          {label}
-        </Label>
-      )}
+      <Label>{label}</Label>
 
       <div
         className='combo-box__control'
         ref={comboBoxRef}
       >
-        <Input className='combo-box__control__input' />
+        <Input
+          className='combo-box__control__input'
+          placeholder={placeholder}
+        />
 
         <Pressable className='combo-box__control__button'>
-          <ChevronDown
-            className={classNames(
-              'combo-box__control__button__icon',
-              isComboBoxOpen && 'rotate'
-            )}
-          />
+          <ChevronIcon isRotated={isComboBoxMenuOpen} />
         </Pressable>
       </div>
 
       <Popover>
-        <ListBox
-          className='combo-box__list'
-          items={options}
-          style={{ minWidth: menuMinWidth }}
-        >
-          {option => (
-            <ListBoxItem
-              key={option.key}
-              textValue={option.label}
-            >
-              <OptionItem
+        <Motion animation='accordion'>
+          <ListBox
+            className='combo-box__list-box'
+            items={options}
+            style={{ minWidth: menuMinWidth }}
+          >
+            {option => (
+              <ListBoxItem
                 key={option.key}
-                Icon={option.Icon}
-                isDisabled={option.isDisabled}
-                isSelected={option.key === selectedKey}
-                label={option.label}
-              />
-            </ListBoxItem>
-          )}
-        </ListBox>
+                textValue={option.label}
+              >
+                <OptionItem
+                  key={option.key}
+                  Icon={option.Icon}
+                  isDisabled={option.isDisabled}
+                  isSelected={option.key === selectedKey}
+                  label={option.label}
+                />
+              </ListBoxItem>
+            )}
+          </ListBox>
+        </Motion>
       </Popover>
     </ReactAriaComboBox>
   )

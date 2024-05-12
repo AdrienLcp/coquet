@@ -1,0 +1,16 @@
+@import '@/Styles/forms'
+
+.select
+  @include common-select
+
+  &__control
+    @include common-input
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__placeholder
+      color: hsl(var(--neutral-foreground-muted))
+
+  &__list-box__item
+    outline: none

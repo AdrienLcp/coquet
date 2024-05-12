@@ -14,7 +14,7 @@ const animationsMap: Record<Animation, AnimationProps> = {
   'accordion': {
     initial: { originY: 0, scaleY: 0, opacity: 0 },
     animate: { scaleY: 1, opacity: 1 },
-    transition: { type: 'spring', duration: 0.3 }
+    transition: { type: 'spring', duration: 0.2 }
   },
   'fade-in': {
     initial: { opacity: 0 },

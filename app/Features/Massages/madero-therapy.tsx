@@ -47,7 +47,7 @@ export const MaderoTherapie: React.FC = () => {
       <p>
         {i18n('domain.massages.madero-therapy.the')}
         {' '}
-        <b>{i18n('domain.massages.madero-therapy.label')}</b>
+        <b>{i18n('domain.massages.madero-therapy.name')}</b>
         {' '}
         {i18n('domain.massages.madero-therapy.description')}
       </p>

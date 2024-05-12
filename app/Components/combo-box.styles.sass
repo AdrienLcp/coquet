@@ -1,13 +1,14 @@
 @import '@/Styles/forms'
 
 .combo-box
+  @include common-select
+
   &__control
     position: relative
 
     &__input
       @include common-input
-      width: 100%
-      padding-right: calc(var(--input-padding-block, 4px) * 2 + 24px)
+      padding-inline-end: calc(var(--input-padding-block, 4px) * 2 + 24px)
 
     &__button
       position: absolute
@@ -22,17 +23,3 @@
 
       &:active
         background-color: hsl(var(--neutral-background-primary-pressed))
-
-      &__icon
-        transition: transform var(--transition-200) var(--timing, ease-in-out)
-
-        &.rotate
-          transform: rotate(180deg)
-
-  &__list
-    background-color: hsl(var(--neutral-background-primary-rest))
-    width: 100%
-    padding-block: var(--spacing-xxxs, 4px)
-    border-radius: var(--input-radius, 4px)
-    box-shadow: var(--elevation-3)
-

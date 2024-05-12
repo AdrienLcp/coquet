@@ -9,14 +9,18 @@ import { getStoredItem, storeItem } from '@/Helpers/local-storage'
 import type { DotNestedKeys } from '@/Helpers/strings.js'
 
 import frStrings from '@/I18n/Dictionaries/fr.json'
-import enStrings from '@/I18n/Dictionaries/en.json'
-import esStrings from '@/I18n/Dictionaries/es.json'
+// import enStrings from '@/I18n/Dictionaries/en.json'
+// import esStrings from '@/I18n/Dictionaries/es.json'
 
 type Dictionary = typeof frStrings
 
 type I18NStringPaths = DotNestedKeys<Dictionary>
 
-export const LOCALES = ['FR', 'EN', 'ES'] as const
+export const LOCALES = [
+  'FR',
+  // 'EN',
+  // 'ES'
+] as const
 
 export type Locale = typeof LOCALES[number]
 
@@ -27,14 +31,14 @@ export const localesMap: LocalesMap = {
     label: 'Français',
     dictionary: frStrings
   },
-  EN: {
-    label: 'English',
-    dictionary: enStrings
-  },
-  ES: {
-    label: 'Español',
-    dictionary: esStrings
-  }
+  // EN: {
+  //   label: 'English',
+  //   dictionary: enStrings
+  // },
+  // ES: {
+  //   label: 'Español',
+  //   dictionary: esStrings
+  // }
 }
 
 type LocaleInfo = {

@@ -1,11 +1,8 @@
 import React from 'react'
-import {
-  TextField,
-  type TextFieldProps,
-  Label,
-  Text
-} from 'react-aria-components'
+import { TextField, type TextFieldProps } from 'react-aria-components'
 
+import { Label } from '@/Components/label'
+import { Text } from '@/Components/text'
 import { classNames } from '@/Helpers/styles'
 
 import './base-field.styles.sass'
@@ -29,21 +26,15 @@ export const BaseField: React.FC<BaseFieldProps> = ({
     {...props}
     className={classNames('base-field', className)}
   >
-    {label !== undefined && (
-      <Label className='base-field__label'>
-        {label}
-      </Label>
-    )}
+    <Label>{label}</Label>
 
     <>{children}</>
 
-    {description !== undefined && (
-      <Text
-        slot='description'
-        className='base-field__description'
-      >
-        {description}
-      </Text>
-    )}
+    <Text
+      slot='description'
+      className='base-field__description'
+    >
+      {description}
+    </Text>
   </TextField>
 )

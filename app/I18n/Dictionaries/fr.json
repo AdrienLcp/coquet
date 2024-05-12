@@ -7,7 +7,9 @@
   },
   "domain": {
     "book": {
-      "page-title": "Réserver un massage",
+      "title": "Réserver un massage",
+      "subtitle": "Vous pouvez faire une demande de réservation pour un massage. Vous recevrez une réponse grâce au moyen de contact que vous aurez renseigné (adresse mail ou numéro de téléphone).",
+      "send": "Envoyer",
       "fields": {
         "day": {
           "description": "Choisissez une date",
@@ -43,7 +45,7 @@
       },
       "message-sent": {
         "title": "Demande de réservation envoyée",
-        "sub-text": "Vous recevrez un mail ou un SMS de confirmation dans les plus brefs délais."
+        "description": "Vous recevrez un mail ou un SMS de confirmation dans les plus brefs délais."
       }
     },
     "massages": {
@@ -51,10 +53,10 @@
       "minutes": "minutes",
       "euros": "€",
       "lymphatic-drainage": {
-        "link-label": "Drainage lymphatique",
+        "label": "Drainage lymphatique",
         "title": "Un massage qui t'affine (et bien plus)",
         "the": "Le",
-        "label": "massage drainant lymphatique",
+        "name": "massage drainant lymphatique",
         "description": "(méthode brésilienne) est plus tonique que la méthode Vodder, permettant des résultats plus",
         "instant": "instantanés",
         "and": "et",
@@ -88,12 +90,12 @@
         "goal": "Si ton objectif n'est pas de perdre du poids, de t'affiner ou encore de te sentir plus tonique, je te propose aussi..."
       },
       "madero-therapy": {
-        "link-label": "Madérothérapie",
+        "label": "Madérothérapie",
         "title": "Le massage qui tonifie ton corps",
         "catch-phrase": "Tu te demandes sûrement",
         "question": "\"Mais qu'est-ce que c'est que ça ?\"",
         "the": "La",
-        "label": "madérothérapie",
+        "name": "madérothérapie",
         "description": "est un art ancestral. Née en Orient, elle servait principalement à soulager les tensions musculaires et articulaires",
         "paragraph-1": "C'est un massage manuel, avec l'utilisation des outils en bois qui fonctionnent sous pression, pas besoin de forcer.",
         "paragraph-2": "Accompagné d'une bonne hygiène de vie, il offre des résultats et vertus impressionnants !",
@@ -123,7 +125,7 @@
         "before-after": "Photo avant / après une séance de madérothérapie"
       },
       "scalp": {
-        "link-label": "Cuir chevelu",
+        "label": "Cuir chevelu",
         "title": "Le massage spécial cuir chevelu",
         "bio-products": "Je te masse avec des produits 100% bio, adaptés à ton cuir et tes cheveux, grâce à un",
         "diagnosis": "diagnostic établi ensemble",

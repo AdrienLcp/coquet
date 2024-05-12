@@ -10,8 +10,10 @@
   @include label-medium
   border: var(--input-stroke, 2px) solid hsl(var(--neutral-stroke-rest))
   border-radius: var(--input-radius, 4px)
-  background-color: transparent
   padding: var(--input-padding-block, 4px) var(--input-padding-inline, 8px)
+  width: 100%
+  background-color: transparent
+  color: inherit
 
   &::placeholder
     color: hsl(var(--neutral-foreground-muted))
@@ -22,3 +24,11 @@
   &:focus
     border-color: hsl(var(--neutral-stroke-selected))
     outline: hsl(var(--neutral-stroke-selected))
+
+@mixin common-select
+  &__list-box
+    width: 100%
+    background-color: hsl(var(--neutral-background-primary-rest))
+    padding-block: var(--spacing-xxxs, 4px)
+    border-radius: var(--input-radius, 4px)
+    box-shadow: var(--elevation-3)
