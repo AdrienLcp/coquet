@@ -32,7 +32,7 @@ export const LymphaticDrainage: React.FC = () => {
 
   return (
     <MassageWrapper
-      massageKey='lymphatic-drainage'
+      massageKey='Drainage lymphatique'
       title={i18n('domain.massages.lymphatic-drainage.title')}
     >
       <p>

@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { BookForm } from '@/(Pages)/book/book-form'
-import { BookHeading } from '@/(Pages)/book/book-heading'
 import { env } from '@/env'
 
 const BookPage: React.FC = async () => {
@@ -9,8 +8,6 @@ const BookPage: React.FC = async () => {
 
   return (
     <>
-      <BookHeading />
-
       <BookForm formSpreeKey={env.FORM_SPREE_KEY} />
     </>
   )

@@ -33,16 +33,22 @@
       "language": "en,es"
     },
     {
-      "filename": "app/I18n/Dictionaries/fr.json",
+      "filename": [
+        "app/I18n/Dictionaries/fr.json",
+        "app/Domain/offers.ts"
+      ],
       "language": "en,fr"
     }
   ],
   "cSpell.words": [
     "Ancenis",
+    "chevelu",
     "CNPM",
+    "Cuir",
     "formspree",
     "instagram",
     "Lucide",
+    "Lymphatique",
     "madero",
     "maderotherapie",
     "madérothérapie",

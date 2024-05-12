@@ -1,3 +1,4 @@
+@import '@/Styles/mixins'
 @import '@/Styles/forms'
 
 .select
@@ -9,8 +10,12 @@
     align-items: center
     justify-content: space-between
 
-    &__placeholder
-      color: hsl(var(--neutral-foreground-muted))
+    &__box
+      @include text-ellipsis
+      max-width: 90%
+
+      &__placeholder
+        color: hsl(var(--neutral-foreground-muted))
 
   &__list-box__item
     outline: none

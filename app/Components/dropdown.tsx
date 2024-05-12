@@ -4,12 +4,12 @@ import {
   Menu,
   type MenuProps,
   MenuItem,
-  MenuTrigger,
-  Popover
+  MenuTrigger
 } from 'react-aria-components'
 
 import { OptionItem } from '@/Components/option'
 import { Motion } from '@/Components/motion'
+import { Popover } from '@/Components/popover'
 
 import './dropdown.styles.sass'
 
@@ -39,7 +39,7 @@ export function Dropdown <T extends Key> ({ children, options }: DropdownProps<T
     <MenuTrigger>
       {children}
 
-      <Popover offset={5}>
+      <Popover>
         <Motion animation='accordion'>
           <Menu
             selectedKeys={options.filter(option => Boolean(option.isSelected)).map(option => option.key)}

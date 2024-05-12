@@ -20,15 +20,15 @@ export const MassagesLinks: React.FC = () => {
 
   const links: MassageLink[] = [
     {
-      key: 'madero-therapy',
+      key: 'Madérothérapie',
       label: i18n('domain.massages.madero-therapy.label')
     },
     {
-      key: 'lymphatic-drainage',
+      key: 'Drainage lymphatique',
       label: i18n('domain.massages.lymphatic-drainage.label')
     },
     {
-      key: 'scalp',
+      key: 'Cuir chevelu',
       label: i18n('domain.massages.scalp.label')
     }
   ]

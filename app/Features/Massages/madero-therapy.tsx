@@ -35,7 +35,7 @@ export const MaderoTherapie: React.FC = () => {
 
   return (
     <MassageWrapper
-      massageKey='madero-therapy'
+      massageKey='Madérothérapie'
       title={i18n('domain.massages.madero-therapy.title')}
     >
       <p>

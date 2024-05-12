@@ -11,14 +11,14 @@ type RouteWithParam <T extends RouteKey, U extends SearchParam, V extends string
 const HOME_ROUTE: RouteHref = '/' as const
 const BOOK_ROUTE: RouteHref = '/book' as const
 
-const BOOK_SEARCH_PARAM: SearchParam = 'massage' as const
+export const MASSAGE_SEARCH_PARAM: SearchParam = 'massage' as const
 
 export const isRouteKey = (key: string): key is RouteKey => {
   return ROUTES_KEY.includes(key as RouteKey)
 }
 
 export const getBookWithMassageHref = <T extends MassageKey> (slug: T): RouteWithParam<'book', 'massage', T> => {
-  return `${BOOK_ROUTE}?${BOOK_SEARCH_PARAM}=${slug}`
+  return `${BOOK_ROUTE}?${MASSAGE_SEARCH_PARAM}=${slug}`
 }
 
 export const ROUTES: Record<RouteKey, RouteHref> = {

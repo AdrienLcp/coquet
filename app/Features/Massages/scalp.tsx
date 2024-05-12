@@ -24,7 +24,7 @@ export const Scalp: React.FC = () => {
 
   return (
     <MassageWrapper
-      massageKey='scalp'
+      massageKey='Cuir chevelu'
       title={i18n('domain.massages.scalp.title')}
     >
       <p>

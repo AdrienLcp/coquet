@@ -48,6 +48,58 @@
         "description": "Vous recevrez un mail ou un SMS de confirmation dans les plus brefs délais."
       }
     },
+    "offers": {
+      "Cuir chevelu + soin personnalisé - 30 minutes (45€)": {
+        "label": "Cuir chevelu + soin personnalisé",
+        "time": "30 minutes",
+        "price": "45€"
+      },
+      "Drainage lymphatique méthode brésilienne - 75 minutes (110€)": {
+        "label": "Drainage lymphatique méthode brésilienne",
+        "time": "75 minutes",
+        "price": "110€"
+      },
+      "Madérothérapie corps - 60 minutes (90€)": {
+        "label": "Madérothérapie corps",
+        "time": "60 minutes",
+        "price": "90€"
+      },
+      "Madérothérapie corps - 90 minutes (130€)": {
+        "label": "Madérothérapie corps",
+        "time": "90 minutes",
+        "price": "130€"
+      },
+      "Madérothérapie corps - 120 minutes (170€)": {
+        "label": "Madérothérapie corps",
+        "time": "120 minutes",
+        "price": "170€"
+      },
+      "Madérothérapie visage - 45 minutes (55€)": {
+        "label": "Madérothérapie visage",
+        "time": "45 minutes",
+        "price": "55€"
+      },
+      "Madérothérapie visage + corps - 105 minutes (140€)": {
+        "label": "Madérothérapie visage + corps",
+        "time": "105 minutes",
+        "price": "140€"
+      },
+      "Madérothérapie + Drainage lymphatique - 120 minutes (170€)": {
+        "label": "Madérothérapie + Drainage lymphatique",
+        "time": "120 minutes",
+        "price": "170€"
+      },
+      "Par zone(s) - 30 minutes (50€)": {
+        "label": "Par zone(s)",
+        "time": "30 minutes",
+        "price": "50€"
+      },
+      "Par zone(s) méthodes mixtes - 30 minutes (55€)": {
+        "label": "Par zone(s) méthodes mixtes",
+        "time": "30 minutes",
+        "price": "55€"
+      }
+    },
     "massages": {
       "book-this-massage": "Réserver ce massage",
       "minutes": "minutes",
