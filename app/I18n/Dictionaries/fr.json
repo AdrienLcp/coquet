@@ -49,37 +49,45 @@
     "massages": {
       "minutes": "minutes",
       "euros": "€",
+      "madero-therapy": {
+        "title": "Le massage qui tonifie ton corps",
+        "catch-phrase": "Tu te demandes sûrement",
+        "question": "\"Mais qu'est-ce que c'est que ça ?\"",
+        "the": "La",
+        "label": "madérothérapie",
+        "description": "est un art ancestral. Née en Orient, elle servait principalement à soulager les tensions musculaires et articulaires",
+        "paragraph-1": "C'est un massage manuel, avec l'utilisation des outils en bois qui fonctionnent sous pression, pas besoin de forcer.",
+        "paragraph-2": "Accompagné d'une bonne hygiène de vie, il offre des résultats et vertus impressionnants !",
+        "body": {
+          "title": "Pour le corps",
+          "benefits": {
+            "1": "Resculpte la silhouette (en cassant la graisse persistante)",
+            "2": "Augmente la production de collagène et d'élastine",
+            "3": "Drainants -> réduit la rétention des liquides",
+            "4": "Active le système circulatoire et lymphatique",
+            "5": "Élimine les toxines du corps",
+            "6": "Stimule et tonifie les muscles"
+          }
+        },
+        "face": {
+          "title": "Pour le visage",
+          "benefits": {
+            "1": "Réduction du double-menton",
+            "2": "Effet liftant",
+            "3": "Réduction des rides (au niveau des yeux et des lèvres)",
+            "4": "Rajeunissement du visage",
+            "5": "Peau repulpée, tonique, lisse",
+            "6": "Lutte contre le stress, maux de tête"
+          }
+        },
+        "tools": "Outils de madérothérapie",
+        "before-after": "Photo avant / après une séance de madérothérapie"
+      },
       "lymphatic-drainage": {
-        "title": "Drainage lymphatique - Méthode brésilienne",
-        "description": ""
-      },
-      "maderotherapy-and-lymphatic-drainage": {
-        "title": "Madérothérapie + Drainage lymphatique",
-        "description": ""
-      },
-      "maderotherapy-body": {
-        "title": "Madérothérapie corps",
-        "description": ""
-      },
-      "maderotherapy-body-and-face": {
-        "title": "Madérothérapie corps et visage",
-        "description": ""
-      },
-      "maderotherapy-face": {
-        "title": "Madérothérapie visage",
-        "description": ""
-      },
-      "scalp": {
-        "title": "Cuir chevelu + soin personnalisé",
-        "description": ""
-      },
-      "zone": {
-        "title": "Par zone(s)",
-        "description": ""
-      },
-      "zone-mixed-methods": {
-        "title": "Par zone(s) - Méthodes mixtes",
-        "description": ""
+        "title": "Un massage qui t'affine (et bien plus)",
+        "the": "Le",
+        "label": "massage drainant lymphatique",
+        "description": "(méthode brésilienne)"
       }
     }
   },
@@ -94,7 +102,10 @@
     "about": {
       "images-alt": {
         "marie": "Marie",
-        "bed": "Lit de massage"
+        "bed": "Lit de massage",
+        "lymphatic-drainage-degree": "Diplôme de drainage lymphatique",
+        "madero-therapy-degree": "Diplôme de madérothérapie",
+        "madero-therapy-face-degree": "Diplôme de madérothérapie visage"
       },
       "paragraphs": {
         "1": "Moi, c'est Marie, j'ai 35 ans, et j'ai toujours été intéressée par le monde du bien-être et de la beauté.",

@@ -1,0 +1,25 @@
+.about
+  &__box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: var(--spacing-l)
+
+    &__aside
+      display: flex
+      flex-direction: column
+      gap: var(--spacing-m)
+
+    &__image
+      border-radius: var(--radius-xs, 4px)
+
+  &__paragraph
+    display: inline
+
+@media (width < 768px)
+  .about__box
+    flex-direction: column
+    gap: var(--spacing-m)
+
+    &__aside
+      gap: var(--spacing-s)

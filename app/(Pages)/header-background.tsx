@@ -5,7 +5,7 @@ import React from 'react'
 import { Image } from '@/Components/image'
 import { useI18n } from '@/I18n'
 
-import massageBed from '@/Assets/Images/bed-landscape.jpg'
+import massageBed from '@/Assets/Images/tools/bed-landscape.jpg'
 
 import './header-background.styles.sass'
 

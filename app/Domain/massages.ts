@@ -1,9 +1,5 @@
 import type { StaticImageData } from 'next/image'
 
-import bedLandscape from '@/Assets/Images/bed-landscape.jpg'
-import bedPortrait from '@/Assets/Images/bed-portrait.jpg'
-import napKins from '@/Assets/Images/napkins.jpg'
-
 // export const MASSAGES_KEY = [
 //   'lymphatic-drainage',
 //   'maderotherapy-and-lymphatic-drainage',

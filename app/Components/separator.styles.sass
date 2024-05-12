@@ -1,6 +1,13 @@
 .separator
+  border: none
+  border-radius: var(--radius-circular, 99px)
+  background-color: hsl(var(--neutral-foreground-muted))
+  margin-inline: auto
+
   &.horizontal
+    height: var(--stroke-thick, 2px)
     width: max(200px, 80%)
-    margin-inline: auto 
 
   &.vertical
+    width: var(--stroke-thick, 2px)
+    height: max(200px, 80%)

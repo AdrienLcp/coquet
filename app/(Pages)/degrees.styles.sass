@@ -1,0 +1,15 @@
+.degrees
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  gap: var(--spacing-l)
+
+  &__image
+    position: relative
+    border-radius: var(--radius-xs, 4px)
+    transition: transform var(--transition-200) var(--timing, ease-in-out)
+
+    &:hover
+      z-index: 1
+      transform: scale(1.5)

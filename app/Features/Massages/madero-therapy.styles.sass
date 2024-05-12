@@ -1,0 +1,19 @@
+@import '@/Styles/typography'
+
+.madero-therapy
+  &__box
+    @include label-small
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: var(--spacing-xs)
+
+    &__images-container
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      gap: var(--spacing-xs)
+
+      &__item
+        border-radius: var(--radius-xs, 4px)
