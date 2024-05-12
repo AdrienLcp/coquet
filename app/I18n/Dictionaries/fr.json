@@ -47,9 +47,48 @@
       }
     },
     "massages": {
+      "book-this-massage": "Réserver ce massage",
       "minutes": "minutes",
       "euros": "€",
+      "lymphatic-drainage": {
+        "link-label": "Drainage lymphatique",
+        "title": "Un massage qui t'affine (et bien plus)",
+        "the": "Le",
+        "label": "massage drainant lymphatique",
+        "description": "(méthode brésilienne) est plus tonique que la méthode Vodder, permettant des résultats plus",
+        "instant": "instantanés",
+        "and": "et",
+        "visible": "visibles.",
+        "paragraph": "Mélangeant gestes dynamiques et relaxants, il se fait de la tête aux pieds. Aucune partie du corps n'est oubliée.",
+        "subtitle": "Et à quoi il sert ?",
+        "paragraphs": {
+          "1": "Ce massage a pour but de faire circuler la lymphe par un système de pompage des glandes lymphatiques et de pressions manuelles.",
+          "2": "Ce qui est top, c'est qu'il élimine les toxines et la rétention d'eau, il t'apporte une sensation de légèreté ☁️",
+          "3": "Tu peux dire Adieu à tes troubles digestifs (constipation, ballonnements) si tu en souffres.",
+          "4": "Ce qui est encore plus top ?"
+        },
+        "benefits": {
+          "weight-loss": "Il favorise une perte de poids",
+          "fast": "rapide",
+          "and": "et",
+          "lasting": "durable",
+          "good-lifestyle": "💪🏽 (évidemment, si tu as une bonne hygiène de vie)",
+          "more": {
+            "title": "Les autre + qui l'accompagnent :",
+            "1": "Renforce le système immunitaire",
+            "2": "Améliore la circulation sanguine",
+            "3": "Élimine la cellulite aqueuse"
+          }
+        },
+        "footer": "Ce massage est fait avec des produits d'origine 100% naturels 🌱",
+        "before-after": "Photo avant / après une séance de madérothérapie",
+        "more-photos": "Pour plus de photos et d'infos, rejoins-moi sur mon",
+        "instagram": "instagram",
+        "wait": "Attends, c'est pas fini !",
+        "goal": "Si ton objectif n'est pas de perdre du poids, de t'affiner ou encore de te sentir plus tonique, je te propose aussi..."
+      },
       "madero-therapy": {
+        "link-label": "Madérothérapie",
         "title": "Le massage qui tonifie ton corps",
         "catch-phrase": "Tu te demandes sûrement",
         "question": "\"Mais qu'est-ce que c'est que ça ?\"",
@@ -83,11 +122,32 @@
         "tools": "Outils de madérothérapie",
         "before-after": "Photo avant / après une séance de madérothérapie"
       },
-      "lymphatic-drainage": {
-        "title": "Un massage qui t'affine (et bien plus)",
-        "the": "Le",
-        "label": "massage drainant lymphatique",
-        "description": "(méthode brésilienne)"
+      "scalp": {
+        "link-label": "Cuir chevelu",
+        "title": "Le massage spécial cuir chevelu",
+        "bio-products": "Je te masse avec des produits 100% bio, adaptés à ton cuir et tes cheveux, grâce à un",
+        "diagnosis": "diagnostic établi ensemble",
+        "since": "(étant coiffeuse depuis 18 ans)",
+        "benefit": "Tu bénéficieras d'un soin",
+        "custom": "personnalisé",
+        "and": "et d'une",
+        "relax": "relaxation complète",
+        "with": ", accompagnée d'une aromathérapie tout au long du massage.",
+        "just-sit": "Il te suffit d'avoir une chaise et de t'asseoir. Pour le reste, c'est moi qui travaille ! 💆🏽‍♀️",
+        "ideal-for": {
+          "title": "Ce massage est idéal pour :",
+          "1": "Favoriser la pousse des cheveux",
+          "2": "Activer la circulation sanguine",
+          "3": "Combattre la chute des cheveux",
+          "footer": "Il est apaisant et anti-stress. L'idéal pour se détendre après une dure semaine par exemple 🤗"
+        },
+        "products": {
+          "title": "Les produits utilisés :",
+          "1": "Beurre de karité 100% naturel, venu directement du Burkina Faso homologué français",
+          "2": "Huiles essentielles BIO françaises (hors personnes à tendance allergènes ou ayant des problèmes respiratoires)",
+          "3": "Huiles hydratantes, fortifiantes, rééquilibrantes bio"
+        },
+        "footer": "Alors, prête à tenter l'aventure avec moi pour rebooster ton corps et ta confiance en toi ? 😙"
       }
     }
   },
@@ -118,6 +178,9 @@
         "8": "Je me déplace chez vous avec mon matériel (30 km aux alentours d'Ancenis 44 / 49), afin de vous offrir ces pratiques, qui vous donneront des résultats... Même en",
         "bold": "une seule séance !"
       }
+    },
+    "book-link": {
+      "label": "Réserver"
     },
     "footer": {
       "terms-of-sale": {

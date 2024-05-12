@@ -153,12 +153,16 @@ input {
   outline: 0;
 }
 
-/* personnal add */
+/* Personal adds */
 
 *,
 *::before,
 *::after {
   text-wrap: pretty;
+}
+
+b {
+  font-weight: bold;
 }
 
 input[type="search"]::-webkit-search-cancel-button {

@@ -34,21 +34,20 @@ export const MaderoTherapie: React.FC = () => {
   ]
 
   return (
-    <MassageWrapper title={i18n('domain.massages.madero-therapy.title')}>
+    <MassageWrapper
+      massageKey='madero-therapy'
+      title={i18n('domain.massages.madero-therapy.title')}
+    >
       <p>
         {i18n('domain.massages.madero-therapy.catch-phrase')}
         {' '}
-        <span className='italic'>
-        {i18n('domain.massages.madero-therapy.question')}
-        </span>
+        <i>{i18n('domain.massages.madero-therapy.question')}</i>
       </p>
 
       <p>
         {i18n('domain.massages.madero-therapy.the')}
         {' '}
-        <span className='bold'>
-          {i18n('domain.massages.madero-therapy.label')}
-        </span>
+        <b>{i18n('domain.massages.madero-therapy.label')}</b>
         {' '}
         {i18n('domain.massages.madero-therapy.description')}
       </p>
@@ -62,9 +61,7 @@ export const MaderoTherapie: React.FC = () => {
       </p>
 
       <div>
-        <span className='bold'>
-          {i18n('domain.massages.madero-therapy.body.title')}
-        </span>
+        <b>{i18n('domain.massages.madero-therapy.body.title')}</b>
 
         <ul>
           {bodyBenefits.map((benefit, index) => (
@@ -76,9 +73,7 @@ export const MaderoTherapie: React.FC = () => {
       </div>
 
       <div>
-        <span className='bold'>
-          {i18n('domain.massages.madero-therapy.face.title')}
-        </span>
+        <b>{i18n('domain.massages.madero-therapy.face.title')}</b>
 
         <ul>
           {faceBenefits.map((benefit, index) => (
@@ -104,9 +99,7 @@ export const MaderoTherapie: React.FC = () => {
           />
         </div>
 
-        <span>
-          {i18n('domain.massages.madero-therapy.tools')}
-        </span>
+        <span>{i18n('domain.massages.madero-therapy.tools')}</span>
       </div>
 
       <div className='madero-therapy__box'>
@@ -118,9 +111,7 @@ export const MaderoTherapie: React.FC = () => {
           />
         </div>
 
-        <span>
-          {i18n('domain.massages.madero-therapy.before-after')}
-        </span>
+        <span>{i18n('domain.massages.madero-therapy.before-after')}</span>
       </div>
     </MassageWrapper>
   )

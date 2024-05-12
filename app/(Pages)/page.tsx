@@ -5,6 +5,8 @@ import { Intro } from '@/(Pages)/intro'
 import { Massages } from '@/Features/Massages/massages'
 import { Opinions } from '@/(Pages)/opinions'
 import { Separator } from '@/Components/separator'
+import { MassagesLinks } from '@/Features/Massages/massages-links'
+import { BookLink } from '@/(Pages)/book-link'
 
 const HomePage: React.FC = async () => (
   <>
@@ -21,6 +23,10 @@ const HomePage: React.FC = async () => (
     <Separator />
 
     <Opinions />
+
+    <MassagesLinks />
+
+    <BookLink />
   </>
 )
 

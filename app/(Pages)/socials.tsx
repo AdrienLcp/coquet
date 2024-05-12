@@ -8,33 +8,37 @@ import { TikTokIcon } from '@/Assets/Icons/tik-tok'
 
 import './socials.styles.sass'
 
+type SocialNetworkKey = 'facebook' | 'instagram' | 'tikTok'
+
 type SocialNetwork = {
-  key: string
+  key: SocialNetworkKey
   url: string
   Icon: IconElement
   color: string
 }
 
-const socialsNetworks: SocialNetwork[] = [
-  {
-    key: 'Facebook',
+export const SOCIALS_NETWORKS: Record<SocialNetworkKey, SocialNetwork> = {
+  facebook: {
+    key: 'facebook',
     url: 'https://www.facebook.com/profile.php?id=61557566169594',
     Icon: FacebookIcon,
     color: '#3B5998'
   },
-  {
-    key: 'Instagram',
-    url: 'https://www.instagram.com/lmc_le_moment_cocooning',
+  instagram: {
+    key: 'instagram',
+    url: 'https://www.instagram.com/lemomentcocooning_',
     Icon: InstagramIcon,
     color: '#C13584'
   },
-  {
-    key: 'TikTok',
+  tikTok: {
+    key: 'tikTok',
     url: 'https://www.tiktok.com/@lmcmarie',
     Icon: TikTokIcon,
     color: '#EE1D52'
   }
-]
+}
+
+const socialsNetworks = Object.values(SOCIALS_NETWORKS)
 
 export const Socials: React.FC = () => (
   <ul className='socials'>

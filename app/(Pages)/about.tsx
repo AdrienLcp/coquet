@@ -25,15 +25,9 @@ export const About: React.FC = () => {
         />
 
         <aside className='about__box__aside'>
-          <p>
-            {i18n('layouts.about.paragraphs.1')}
-          </p>
-          <p>
-            {i18n('layouts.about.paragraphs.2')}
-          </p>
-          <p>
-            {i18n('layouts.about.paragraphs.3')}
-          </p>
+          <p>{i18n('layouts.about.paragraphs.1')}</p>
+          <p>{i18n('layouts.about.paragraphs.2')}</p>
+          <p>{i18n('layouts.about.paragraphs.3')}</p>
         </aside>
       </div>
 
@@ -43,15 +37,9 @@ export const About: React.FC = () => {
 
       <div className='about__box'>
         <aside className='about__box__aside'>
-          <p>
-            {i18n('layouts.about.paragraphs.5')}
-          </p>
-          <p>
-            {i18n('layouts.about.paragraphs.6')}
-          </p>
-          <p>
-            {i18n('layouts.about.paragraphs.7')}
-          </p>
+          <p>{i18n('layouts.about.paragraphs.5')}</p>
+          <p>{i18n('layouts.about.paragraphs.6')}</p>
+          <p>{i18n('layouts.about.paragraphs.7')}</p>
         </aside>
 
         <Image
@@ -64,9 +52,7 @@ export const About: React.FC = () => {
       <p>
         {i18n('layouts.about.paragraphs.8')}
         {' '}
-        <span className='bold'>
-          {i18n('layouts.about.paragraphs.bold')}
-        </span>
+        <b>{i18n('layouts.about.paragraphs.bold')}</b>
       </p>
 
       <Degrees />

@@ -4,18 +4,21 @@ const ROUTES_KEY = ['home', 'book'] as const
 
 export type RouteKey = typeof ROUTES_KEY[number]
 export type RouteHref =  '/' | `/${RouteKey}`
+type SearchParam = 'massage'
 
-type NestedRouteHref<T extends RouteKey, U extends string> = `/${T}/${U}`
+type RouteWithParam <T extends RouteKey, U extends SearchParam, V extends string> = `/${T}?${U}=${V}`
 
 const HOME_ROUTE: RouteHref = '/' as const
 const BOOK_ROUTE: RouteHref = '/book' as const
+
+const BOOK_SEARCH_PARAM: SearchParam = 'massage' as const
 
 export const isRouteKey = (key: string): key is RouteKey => {
   return ROUTES_KEY.includes(key as RouteKey)
 }
 
-export const getNestedBookHref = <T extends MassageKey> (slug: T): NestedRouteHref<'book', T> => {
-  return `${BOOK_ROUTE}/${slug}`
+export const getBookWithMassageHref = <T extends MassageKey> (slug: T): RouteWithParam<'book', 'massage', T> => {
+  return `${BOOK_ROUTE}?${BOOK_SEARCH_PARAM}=${slug}`
 }
 
 export const ROUTES: Record<RouteKey, RouteHref> = {
