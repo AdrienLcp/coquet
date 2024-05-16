@@ -1,3 +1,4 @@
+@import '@/Styles/mixins'
 @import '@/Styles/typography'
 
 .button
@@ -31,10 +32,6 @@
     color: hsl(var(--neutral-foreground-onbrand-rest))
     border-color: hsl(var(--brand-background-primary-rest))
 
-    &:hover
-      background-color: hsl(var(--brand-background-primary-hover))
-      border-color: hsl(var(--brand-background-primary-hover))
-
     &:active
       border-color: hsl(var(--brand-background-primary-pressed))
       background-color: hsl(var(--brand-background-primary-pressed))
@@ -49,10 +46,6 @@
     color: hsl(var(--neutral-foreground-rest))
     border-color: hsl(var(--neutral-stroke-rest))
 
-    &:hover
-      background-color: hsl(var(--neutral-background-primary-hover))
-      border-color: hsl(var(--neutral-stroke-hover))
-
     &:active
       background-color: hsl(var(--neutral-background-primary-pressed))
       border-color: hsl(var(--neutral-stroke-pressed))
@@ -66,9 +59,6 @@
     color: hsl(var(--neutral-foreground-rest))
     border-color: transparent
 
-    &:hover
-      background-color: hsl(var(--neutral-background-primary-hover))
-
     &:active
       background-color: hsl(var(--neutral-background-primary-pressed))
 
@@ -80,10 +70,6 @@
     color: hsl(var(--neutral-foreground-onbrand-rest))
     border-color: hsl(var(--brand-background-secondary-rest))
 
-    &:hover
-      background-color: hsl(var(--brand-background-secondary-hover))
-      border-color: hsl(var(--brand-background-secondary-hover))
-
     &:active
       border-color: hsl(var(--brand-background-secondary-pressed))
       background-color: hsl(var(--brand-background-secondary-pressed))
@@ -94,4 +80,39 @@
       border-color: hsl(var(--neutral-background-secondary-disabled))
 
   &:disabled
-    pointer-events: none
+    @include disabled
+
+  @media (pointer: fine)
+    &.filled
+      &:hover
+        background-color: hsl(var(--brand-background-primary-hover))
+        border-color: hsl(var(--brand-background-primary-hover))
+
+      &:active
+        border-color: hsl(var(--brand-background-primary-pressed))
+        background-color: hsl(var(--brand-background-primary-pressed))
+
+    &.outlined
+      &:hover
+        background-color: hsl(var(--neutral-background-primary-hover))
+        border-color: hsl(var(--neutral-stroke-hover))
+
+      &:active
+        background-color: hsl(var(--neutral-background-primary-pressed))
+        border-color: hsl(var(--neutral-stroke-pressed))
+
+    &.transparent
+      &:hover
+        background-color: hsl(var(--neutral-background-primary-hover))
+
+      &:active
+        background-color: hsl(var(--neutral-background-primary-pressed))
+
+    &.tonal
+      &:hover
+        background-color: hsl(var(--brand-background-secondary-hover))
+        border-color: hsl(var(--brand-background-secondary-hover))
+
+      &:active
+        border-color: hsl(var(--brand-background-secondary-pressed))
+        background-color: hsl(var(--brand-background-secondary-pressed))

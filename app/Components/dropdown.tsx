@@ -7,20 +7,11 @@ import {
   MenuTrigger
 } from 'react-aria-components'
 
-import { OptionItem } from '@/Components/option'
+import { type Option, OptionItem } from '@/Components/option'
 import { Motion } from '@/Components/motion'
 import { Popover } from '@/Components/popover'
 
 import './dropdown.styles.sass'
-
-export type Option <T extends Key> = {
-  key: T
-  label: string
-  Icon?: React.ReactNode
-  isSelected?: boolean
-  isDisabled?: boolean
-  onClick?: (option: Option<T>) => void
-}
 
 type DropdownProps <T extends Key> = MenuProps<T> & React.PropsWithChildren<{
   options: Array<Option<T>>

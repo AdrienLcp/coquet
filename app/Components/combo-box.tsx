@@ -96,7 +96,7 @@ export function ComboBox <T extends Key> ({
       <Popover>
         <Motion animation='accordion'>
           <ListBox
-            className='combo-box__list-box'
+            className='combo-box__menu'
             items={options}
             style={{ minWidth: menuMinWidth }}
           >

@@ -6,7 +6,6 @@ import React from 'react'
 
 import { MessageSent } from '@/(Pages)/book/message-sent'
 import { Button } from '@/Components/button'
-import { ComboBox } from '@/Components/combo-box'
 import { Form } from '@/Components/form'
 import { Option } from '@/Components/option'
 import { Select } from '@/Components/select'
@@ -19,6 +18,8 @@ import { useI18n } from '@/I18n'
 import { MASSAGE_SEARCH_PARAM } from '@/Routes'
 
 import './book-form.styles.sass'
+
+import { DateTimePicker } from '@/(Pages)/book/date-time-picker'
 
 type BookFormProps = {
   formSpreeKey: string
@@ -101,6 +102,8 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
             placeholder={i18n('domain.book.fields.massage.placeholder')}
             isRequired
           />
+
+          <DateTimePicker />
 
           {/* Add Date Select */}
 

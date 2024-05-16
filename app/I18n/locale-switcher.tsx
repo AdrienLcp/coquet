@@ -3,7 +3,8 @@
 import React from 'react'
 
 import { Button } from '@/Components/button'
-import { Dropdown, type Option } from '@/Components/dropdown'
+import { Dropdown } from '@/Components/dropdown'
+import type { Option } from '@/Components/option'
 import { type Locale, LOCALES, useI18n, localesMap } from '@/I18n'
 
 export const LocaleSwitcher: React.FC = () => {

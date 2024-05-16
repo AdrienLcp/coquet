@@ -1,2 +1,8 @@
-.pressable:focus
-  outline: var(--stroke-thick, 2px) solid hsl(var(--neutral-foreground-light))
+@import '@/Styles/mixins'
+
+.pressable
+  @include flex-center
+
+  &:focus,
+  &:focus-visible
+    outline: none

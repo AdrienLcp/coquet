@@ -1,7 +1,16 @@
-type PageParams = {
-  slug: string
+type CommonParams = {
+  
 }
 
-export type PageProps = {
-  params: PageParams
+type PageParams <T> = T extends null
+  ? CommonParams
+  : CommonParams & T
+
+type SearchParams = {
+  [key: string]: string | string[] | undefined
+}
+
+export type PageProps <T = null> = {
+  params: PageParams<T>
+  searchParams: SearchParams
 }

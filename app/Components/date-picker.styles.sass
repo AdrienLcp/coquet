@@ -1,0 +1,24 @@
+@import '@/Styles/forms'
+
+.date-picker
+  &__control
+    @include common-input
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &.focused
+      border-color: hsl(var(--neutral-stroke-selected))
+
+    &__input
+      display: flex
+      width: 100%
+      padding-inline-end: calc(var(--input-padding-inline, 8px) * 2 + var(--icon-size, 24px))
+
+    &__button
+      @include button-in-input
+
+  &__menu
+    @include common-menu
+

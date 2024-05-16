@@ -1,8 +1,6 @@
 @import '@/Styles/forms'
 
 .combo-box
-  @include common-select
-
   &__control
     position: relative
 
@@ -11,15 +9,7 @@
       padding-inline-end: calc(var(--input-padding-block, 4px) * 2 + 24px)
 
     &__button
-      position: absolute
-      top: var(--input-stroke, 2px)
-      right: var(--input-stroke, 2px)
-      height: calc(100% - var(--input-stroke, 2px) * 2)
-      padding: calc(var(--input-padding-block, 4px) - var(--input-stroke, 2px))
-      border-radius: calc(var(--input-radius, 4px) - var(--input-stroke, 2px))
+      @include button-in-input
 
-      &:hover
-        background-color: hsl(var(--neutral-background-primary-hover))
-
-      &:active
-        background-color: hsl(var(--neutral-background-primary-pressed))
+  &__menu
+    @include common-menu

@@ -2,8 +2,6 @@
 @import '@/Styles/forms'
 
 .select
-  @include common-select
-
   &__control
     @include common-input
     display: flex
@@ -17,5 +15,8 @@
       &__placeholder
         color: hsl(var(--neutral-foreground-muted))
 
-  &__list-box__item
-    outline: none
+  &__menu
+    @include common-menu
+    
+    &__item
+      outline: none

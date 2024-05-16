@@ -4,7 +4,8 @@ import { MoonIcon, ScreenShareIcon, SunIcon } from 'lucide-react'
 import React from 'react'
 
 import { Button } from '@/Components/button'
-import { Dropdown, type Option } from '@/Components/dropdown'
+import { Dropdown } from '@/Components/dropdown'
+import type { Option } from '@/Components/option'
 import { useI18n } from '@/I18n'
 import { type Theme, THEMES, useTheme } from '@/Theme'
 

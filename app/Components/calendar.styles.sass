@@ -1,0 +1,39 @@
+@import '@/Styles/mixins'
+@import '@/Styles/typography'
+
+.calendar
+  @include label-large
+  display: flex
+  flex-direction: column
+  gap: var(--spacing-s)
+  padding-block-start: var(--spacing-xs)
+  padding-inline: var(--spacing-m)
+
+  &__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-inline: var(--spacing-xxs)
+
+  &__grid
+    & thead
+      border-block-end: var(--stroke-thin, 1px) solid hsl(var(--neutral-stroke-rest))
+      height: 4ch
+
+    &__cell
+      @include flex-center
+      min-height: 5ch
+      aspect-ratio: 1 / 1
+      border-radius: var(--radius-xs, 4px)
+      cursor: pointer
+
+      &:hover
+        background-color: hsl(var(--neutral-background-primary-hover))
+
+      &:active
+        background-color: hsl(var(--neutral-background-primary-pressed))
+
+      &[data-unavailable='true'],
+      &[aria-disabled='true']
+        @include disabled
+        color: hsl(var(--neutral-foreground-disabled))

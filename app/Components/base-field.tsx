@@ -11,8 +11,8 @@ type FilteredTextFieldProps = Omit<TextFieldProps, 'className'>
 
 export type BaseFieldProps = FilteredTextFieldProps & {
   className?: string
-  description?: string
-  label?: string
+  description?: React.ReactNode
+  label?: React.ReactNode
 }
 
 export const BaseField: React.FC<BaseFieldProps> = ({

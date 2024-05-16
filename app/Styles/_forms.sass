@@ -23,12 +23,24 @@
 
   &:focus
     border-color: hsl(var(--neutral-stroke-selected))
-    outline: hsl(var(--neutral-stroke-selected))
 
-@mixin common-select
-  &__list-box
-    width: 100%
-    background-color: hsl(var(--neutral-background-primary-rest))
-    padding-block: var(--spacing-xxxs, 4px)
-    border-radius: var(--input-radius, 4px)
-    box-shadow: var(--elevation-3)
+@mixin common-menu
+  width: 100%
+  background-color: hsl(var(--neutral-background-primary-rest))
+  padding-block: var(--spacing-xxxs, 4px)
+  border-radius: var(--input-radius, 4px)
+  box-shadow: var(--elevation-3)
+
+@mixin button-in-input
+  position: absolute
+  top: 0
+  right: 0
+  height: 100%
+  padding-inline: calc(var(--input-padding-inline) - var(--input-stroke, 2px) / 2)
+  border-radius: calc(var(--input-radius, 4px) - var(--input-stroke, 2px))
+
+  &:hover
+    background-color: hsl(var(--neutral-background-primary-hover))
+
+  &:active
+    background-color: hsl(var(--neutral-background-primary-pressed))

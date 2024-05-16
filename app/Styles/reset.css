@@ -159,6 +159,7 @@ input {
 *::before,
 *::after {
   text-wrap: pretty;
+  outline: none;
 }
 
 b {

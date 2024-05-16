@@ -101,13 +101,13 @@ export function Select <T extends Key> ({
       <Popover>
         <Motion animation='accordion'>
           <ListBox
-            className='select__list-box'
+            className='select__menu'
             items={options}
             style={{ minWidth: menuMinWidth }}
           >
             {({ Icon, isDisabled, isSelected, key, label }) => (
               <ListBoxItem
-                className='select__list-box__item'
+                className='select__menu__item'
                 key={key}
                 textValue={label}
               >
