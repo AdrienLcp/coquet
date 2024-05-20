@@ -8,12 +8,12 @@
   "domain": {
     "book": {
       "title": "Réserver un massage",
-      "subtitle": "Vous pouvez faire une demande de réservation pour un massage. Vous recevrez une réponse grâce au moyen de contact que vous aurez renseigné (adresse mail ou numéro de téléphone).",
+      "subtitle": "Vous pouvez faire une demande de réservation pour un massage. Vous recevrez une réponse grâce au moyen de contact que vous aurez renseigné (adresse mail ou numéro de téléphone).\nMerci de me contacter 12 heures à l'avance en cas de désistement",
       "send": "Envoyer",
       "fields": {
-        "day": {
-          "description": "Choisissez une date",
+        "date": {
           "label": "Date",
+          "placeholder": "Choisissez une date",
           "required": "Ce champs est requis"
         },
         "email-or-phone": {
@@ -23,14 +23,13 @@
           "required": "Ce champs est requis"
         },
         "massage": {
-          "description": "Choisissez un massage",
           "label": "Massage",
           "placeholder": "Choisissez un massage",
           "required": "Ce champs est requis"
         },
         "hour": {
-          "description": "Choisissez une heure",
           "label": "Heure",
+          "placeholder": "Choisissez une heure",
           "required": "Ce champs est requis"
         },
         "more": {

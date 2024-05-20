@@ -4,6 +4,7 @@ import { addDays } from 'date-fns'
 import React from 'react'
 import type { DateValue } from 'react-aria-components'
 
+import { BOOK_FORM_KEYS } from '@/(Pages)/book/book-form'
 import { DatePicker } from '@/Components/date-picker'
 import type { Option } from '@/Components/option'
 import { Select } from '@/Components/select'
@@ -44,33 +45,27 @@ const isDateUnavailable = (dateValue: DateValue): boolean => {
   return isPast || isTooFar
 }
 
+const timeOptions: Array<Option<string>> = Array.from({ length: 10 }).map((_, index) => {
+  const value = `1${index}h00`
+  return { key: value, label: value }
+})
+
 export const DateTimePicker: React.FC = () => {
   const { i18n } = useI18n()
-
-  const timeOptions: Array<Option<string>> = [
-    { key: '10:00', label: '10:00' },
-    { key: '11:00', label: '11:00' },
-    { key: '12:00', label: '12:00' },
-    { key: '13:00', label: '13:00' },
-    { key: '14:00', label: '14:00' },
-    { key: '15:00', label: '15:00' },
-    { key: '16:00', label: '16:00' },
-    { key: '17:00', label: '17:00' },
-    { key: '18:00', label: '18:00' },
-    { key: '19:00', label: '19:00' }
-  ]
 
   return (
     <>
       <DatePicker
         isDateUnavailable={isDateUnavailable}
         isRequired
-        label='Date'
+        label={i18n('domain.book.fields.date.label')}
+        name={BOOK_FORM_KEYS.Date}
       />
 
       <Select
         isRequired
-        label='Hour'
+        label={i18n('domain.book.fields.hour.label')}
+        name={BOOK_FORM_KEYS.Hour}
         options={timeOptions}
       />
     </>

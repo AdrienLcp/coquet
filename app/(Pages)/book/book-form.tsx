@@ -4,6 +4,7 @@ import { useForm } from '@formspree/react'
 import { useSearchParams } from 'next/navigation'
 import React from 'react'
 
+import { DateTimePicker } from '@/(Pages)/book/date-time-picker'
 import { MessageSent } from '@/(Pages)/book/message-sent'
 import { Button } from '@/Components/button'
 import { Form } from '@/Components/form'
@@ -12,30 +13,40 @@ import { Select } from '@/Components/select'
 import { TextArea } from '@/Components/text-area'
 import { TextField } from '@/Components/text-field'
 import { Title } from '@/Components/title'
-import { OFFERS_KEY, OfferKey, getDefaultOfferKeyForMassageKey } from '@/Domain/offers'
 import { isMassageKey } from '@/Domain/massages'
+import { OfferKey, OFFERS_KEY, getDefaultOfferKeyForMassageKey } from '@/Domain/offers'
 import { useI18n } from '@/I18n'
 import { MASSAGE_SEARCH_PARAM } from '@/Routes'
 
 import './book-form.styles.sass'
 
-import { DateTimePicker } from '@/(Pages)/book/date-time-picker'
-
 type BookFormProps = {
   formSpreeKey: string
 }
 
-type FieldValues = {
+type BookFormFieldValues = {
   contact: string
-  massage: string
   date: string
   hour: string
+  massage: string
   message: string
+  name: string
 }
+
+export const BOOK_FORM_KEYS = {
+  Contact: 'Contact',
+  Date: 'Date',
+  Hour: 'Heure',
+  Massage: 'Massage',
+  Message: 'Message',
+  Name: 'Nom'
+}
+
+type FormKey = typeof BOOK_FORM_KEYS[keyof typeof BOOK_FORM_KEYS]
 
 export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
   const [selectedMassage, setSelectedMassage] = React.useState<OfferKey | undefined>(undefined)
-  const [state, handleSubmit] = useForm<FieldValues>(formSpreeKey)
+  const [state, handleSubmit] = useForm<BookFormFieldValues>(formSpreeKey)
   const { i18n } = useI18n()
 
   const searchParams = useSearchParams()
@@ -61,6 +72,32 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
     return { key, label }
   })
 
+  const handleBookFormSubmit = (formData: FormData) => {
+    const getFormValue = (key: FormKey) => {
+      return String(formData.get(key))
+    }
+
+    const contact = getFormValue(BOOK_FORM_KEYS.Contact)
+    const date = getFormValue(BOOK_FORM_KEYS.Date)
+    const hour = getFormValue(BOOK_FORM_KEYS.Hour)
+    const massage = getFormValue(BOOK_FORM_KEYS.Massage)
+    const message = getFormValue(BOOK_FORM_KEYS.Message)
+    const name = getFormValue(BOOK_FORM_KEYS.Name)
+
+    const formattedDate = new Date(date).toLocaleDateString()
+
+    const values: BookFormFieldValues = {
+      name,
+      contact,
+      massage,
+      date: formattedDate,
+      hour,
+      message
+    }
+
+    handleSubmit(values)
+  }
+
   return (
     <>
       <div className='book-form__heading'>
@@ -74,20 +111,20 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
       </div>
     
       <Form
-        onSubmit={handleSubmit}
+        action={handleBookFormSubmit}
         isDisabled={state.submitting}
         className='book-form'
       >
         <div className='book-form__fields'>
           <TextField
-            name='Nom'
+            name={BOOK_FORM_KEYS.Name}
             label={i18n('domain.book.fields.name.label')}
             placeholder={i18n('domain.book.fields.name.placeholder')}
             isRequired
           />
 
           <TextField
-            name='Contact'
+            name={BOOK_FORM_KEYS.Contact}
             label={i18n('domain.book.fields.email-or-phone.label')}
             placeholder={i18n('domain.book.fields.email-or-phone.placeholder')}
             description={i18n('domain.book.fields.email-or-phone.description')}
@@ -96,7 +133,7 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
 
           <Select
             defaultSelectedKey={selectedMassage}
-            name='Massage'
+            name={BOOK_FORM_KEYS.Massage}
             label={i18n('domain.book.fields.massage.label')}
             options={massagesOptions}
             placeholder={i18n('domain.book.fields.massage.placeholder')}
@@ -105,12 +142,8 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
 
           <DateTimePicker />
 
-          {/* Add Date Select */}
-
-          {/* Add Hour Select */}
-
           <TextArea
-            name='Message'
+            name={BOOK_FORM_KEYS.Message}
             label={i18n('domain.book.fields.more.label')}
           />
         </div>
