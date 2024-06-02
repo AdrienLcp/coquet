@@ -5,6 +5,8 @@ import getManifest from '../manifest'
 const manifest = getManifest()
 
 const KEYWORDS = [
+  'ancenis',
+  'vair-sur-loire',
   'amincissant',
   'anti-cellulite',
   'beauté',
