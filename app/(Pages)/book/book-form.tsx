@@ -98,6 +98,9 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
     handleSubmit(values)
   }
 
+  // const isFormDisabled = true
+  const isFormDisabled = state.submitting
+
   return (
     <>
       <div className='book-form__heading'>
@@ -112,7 +115,7 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
     
       <Form
         action={handleBookFormSubmit}
-        isDisabled={state.submitting}
+        isDisabled={isFormDisabled}
         className='book-form'
       >
         <div className='book-form__fields'>
@@ -140,7 +143,7 @@ export const BookForm: React.FC<BookFormProps> = ({ formSpreeKey }) => {
             isRequired
           />
 
-          <DateTimePicker />
+          <DateTimePicker isDisabled={isFormDisabled} />
 
           <TextArea
             name={BOOK_FORM_KEYS.Message}

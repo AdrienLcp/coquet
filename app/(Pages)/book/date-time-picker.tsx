@@ -50,19 +50,25 @@ const timeOptions: Array<Option<string>> = Array.from({ length: 10 }).map((_, in
   return { key: value, label: value }
 })
 
-export const DateTimePicker: React.FC = () => {
+type DateTimePickerProps = {
+  isDisabled?: boolean
+}
+
+export const DateTimePicker: React.FC<DateTimePickerProps> = ({ isDisabled }) => {
   const { i18n } = useI18n()
 
   return (
     <>
       <DatePicker
         isDateUnavailable={isDateUnavailable}
+        isDisabled={isDisabled}
         isRequired
         label={i18n('domain.book.fields.date.label')}
         name={BOOK_FORM_KEYS.Date}
       />
 
       <Select
+        isDisabled={isDisabled}
         isRequired
         label={i18n('domain.book.fields.hour.label')}
         name={BOOK_FORM_KEYS.Hour}
