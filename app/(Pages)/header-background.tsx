@@ -6,6 +6,7 @@ import { Image } from '@/Components/image'
 import { useI18n } from '@/I18n'
 
 import massageBed from '@/Assets/Images/tools/bed-landscape.jpg'
+import massage from '@/Assets/Images/header.jpg'
 
 import './header-background.styles.sass'
 
@@ -14,11 +15,11 @@ export const HeaderBackground: React.FC = () => {
 
   return (
     <Image
-      src={massageBed}
+      src={massage}
       alt={i18n('layouts.header.background-alt')}
       className='header-background'
-      loading={undefined}
-      priority
+      width={1920}
+      height={1080}
     />
   )
 }

@@ -39,7 +39,10 @@ export const MassagesLinks: React.FC = () => {
         {links.map(({ key, label }) => (
           <li key={key}>
             <Link href={`#${key}`}>
-              <Button variant='transparent'>
+              <Button
+                variant='transparent'
+                className='massages-links__item'
+              >
                 {label}
               </Button>
             </Link>

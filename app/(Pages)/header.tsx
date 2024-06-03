@@ -16,7 +16,7 @@ export const Header: React.FC = async () => (
 
     <Motion animation='scale' className='header__logo'>
       <Link href={ROUTES.home}>
-        <LogoTitle direction='column' />
+        <LogoTitle direction='column' size='large' />
       </Link>
     </Motion>
 

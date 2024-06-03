@@ -8,7 +8,7 @@ import { useI18n } from '@/I18n'
 
 import bodyTool from '@/Assets/Images/tools/madero-therapy-body-tools.jpg'
 import faceTool from '@/Assets/Images/tools/madero-therapy-face-tools.jpg'
-import beforeAfter from '@/Assets/Images/before-after/before-after-2.png'
+import beforeAfter from '@/Assets/Images/before-after/before-after-7.png'
 
 import './madero-therapy.styles.sass'
 

@@ -22,12 +22,12 @@ export const Degrees: React.FC = () => {
 
   const degrees: Degree[] = [
     {
-      image: lymphaticDrainageDegree,
-      alt: i18n('layouts.about.images-alt.lymphatic-drainage-degree')
-    },
-    {
       image: maderoTherapyDegree,
       alt: i18n('layouts.about.images-alt.madero-therapy-degree')
+    },
+    {
+      image: lymphaticDrainageDegree,
+      alt: i18n('layouts.about.images-alt.lymphatic-drainage-degree')
     },
     {
       image: maderoTherapyFaceDegree,
