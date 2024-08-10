@@ -6,7 +6,7 @@ import { Massages } from '@/Features/Massages/massages'
 import { Opinions } from '@/(Pages)/opinions'
 import { Separator } from '@/Components/separator'
 import { MassagesLinks } from '@/Features/Massages/massages-links'
-import { BookLink } from '@/(Pages)/book-link'
+import { BookLink } from '@/(Pages)/book/book-link'
 
 const HomePage: React.FC = async () => (
   <>
